@@ -1,4 +1,4 @@
-require("config.js");
+require("config");
 
 
 // GET "/" - lists posts
