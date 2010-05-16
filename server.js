@@ -1,16 +1,4 @@
-// FIXME - dependency ceremony 
-require.paths.unshift("vendor/express/lib");
-require("express");
-require("express/plugins");
-
-
-// FIXME - config ceremony 
-configure(function() {
-    set("root", __dirname);  
-    use(Logger);
-    use(Static, { path: require("path").join(__dirname, "..", "public") });
-    enable("show exceptions");
-});
+require("config.js");
 
 
 // GET "/" - lists posts
@@ -34,14 +22,14 @@ get("/about", function(){
 
 
 // GET "/rss"
-get("/about", function(){
+get("/rss", function(){
     this.render("rss.xml.ejs");
 });
 
 
 // GET "/archive"
 // GET "/archive/2010/10"
-get("/about", function(){
+get("/archive", function(){
     this.render("archive.html.ejs");
 });
 
