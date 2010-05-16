@@ -2,11 +2,58 @@
 <html>
     <head>
         <title>WTFJS</title>
+        <style type="text/css" media="screen">
+            #wrap {
+                width:640px;
+                margin:0 auto 0 auto;
+            }
+            
+            #nav {
+                list-style:none;   
+                margin:0;
+                padding:0;
+                background:#000;
+            }
+            
+            #nav ul li {
+                float:left;
+                margin:0;
+                padding:0;
+            }
+            
+            #nav ul li a {
+                padding:20px;
+                color:#fff;
+                text-decoration:none;
+            }
+            
+            #nav ul li a:hover {
+                background:#eaeaea;
+            }    
+            
+            #content {
+                
+            }
+            
+            #foot {
+                background:#000;
+            }
+            
+            .clear {
+                clear:both;
+            }
+        </style>
     </head>
     <body>
-        <h1>WTFJS</h1>
-        <a href="/rss">RSS</a>
-        <a href="/archive">Archive</a>
-        <%= body %>
+        <div id="wrap">
+            <ul id="nav" class="clear">
+                <li><a href="/">wtfjs</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/rss">rss</a></li>
+                <li><a href="/archive">archive</a></li>
+            </ul>
+            <div id="content"><%= body %></div>
+            <div id="foot">&nbsp;</div>
+        </div>
     </body>
 </html>
