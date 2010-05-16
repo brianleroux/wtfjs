@@ -13,12 +13,12 @@ configure(function() {
 
 // GET "/"
 get("/", function() {
-    return "Hello there from home"
-    /*
-    this.render("index.html.haml", {
-        locals: { remoteIp: this.connection.remoteAddress}
-    });
-    */
+    var o = {
+        title:this.connection.remoteAddress,
+        content:'blog content',
+        author:'brian leroux'
+    };
+    this.render("post.html.ejs", {locals:o});
 });
 
 
