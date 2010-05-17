@@ -1,5 +1,6 @@
 require.paths.unshift("vendor/express/lib");
 require.paths.unshift("vendor/showdown-v0.9/src");
+require.paths.unshift("models");
 
 require("express");
 require("express/plugins");
@@ -9,6 +10,8 @@ var path = require("path");
 var sys = require("sys");
 var fs = require('fs');
 var sd = require("showdown");
+
+var Post = require('post');
 
 var staticPath = path.join(__dirname, "public");
 
@@ -21,52 +24,11 @@ configure(function() {
     enable("show exceptions");
 });
 
-
 // FIXME - this should be done automagically w/ use(Static)
 get('/app.css', function(){ 
     var f = path.join(staticPath, 'app.css');
     this.sendfile(f);
 });
-
-var Post = function(filename){
-    this.filename = filename;
-};
-
-Post.all = function(files) {
-    return files.map(function(f) { 
-        return new Post(f);
-    });
-};
-
-Post.prototype = {
-    created: function() {
-        var e = this.filename.slice(0,3)
-        ,   y = e[0]
-        ,   m = e[1]
-        ,   d = e[2]
-        return new Date(y, m, d);
-    },
-    title: function() {
-        var a = this.filename.split('-')
-        ,   l = a.length
-        ,   t = a.slice(3,l).join(' ').replace('.md','');
-        return t;
-    },
-    anchor: function() {
-        var everything = this.filename.replace('.md','').split('-')
-        ,   length = everything.length
-        ,   theDate = everything.slice(0,3).join('/')
-        ,   article = everything.slice(3,length).join('-');
-
-        return '<a href="/' + theDate  + '/' + article + '">' + this.title() + '</a>' 
-    },
-    html: function() {
-        var text = "Markdown *rocks*.";
-        return sd.md2html(text);
-    }
-};
-
-
 
 // GET "/" - lists posts
 get("/", function() {
