@@ -1,7 +1,4 @@
-contributing to wtfjs
----------------------
-
-you can either fix up the wtf's here or help broadcast wtf's to the rest of the world!
+You can either fix up the wtf's here or help broadcast wtf's to the rest of the world!
 
 contributing an article
 =======================

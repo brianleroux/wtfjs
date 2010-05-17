@@ -20,8 +20,14 @@ configure(function() {
 get("/", function() {
     var self = this;
     fs.readdir(__dirname + '/posts', function(err, files){
+        var posts = Post.all(files).reverse();
+        
+        
         self.render('index.html.ejs', {locals:{ 
-            posts:Post.all(files) 
+            posts:posts,
+            length:posts.length,
+            perPage:5,
+            pages:posts.length/5
         }});
     });  
 });
@@ -58,8 +64,9 @@ get("/archive/:year/:month",function(){
 
 // helper for rendering posts!
 var renderPost = function() {
+    // arguments
     this.render("post.html.ejs", {locals:{
-        post:Post.create('2010-05-10-title-of-article.md')
+        post:Post.create('2010-05-15-hello-world.md')
     }});
 };
 
