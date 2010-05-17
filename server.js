@@ -1,36 +1,22 @@
 require.paths.unshift("vendor/express/lib");
-require.paths.unshift("vendor/showdown-v0.9/src");
 require.paths.unshift("models");
 
 require("express");
 require("express/plugins");
 
-// FIXME - this is ugly
-var path = require("path");
-var sys = require("sys");
-var fs = require('fs');
-var sd = require("showdown");
+var path = require("path")
+,   sys = require("sys")
+,   fs = require('fs')
+,   Post = require('post');
 
-var Post = require('post');
-
-var staticPath = path.join(__dirname, "public");
-
-
-// FIXME - config ceremony 
 configure(function() {
     set("root", __dirname);  
     use(Logger);
-    use(Static, { path:staticPath }); // FIXME - appears to be failing
+    use(Static);
     enable("show exceptions");
 });
 
-// FIXME - this should be done automagically w/ use(Static)
-get('/app.css', function(){ 
-    var f = path.join(staticPath, 'app.css');
-    this.sendfile(f);
-});
-
-// GET "/" - lists posts
+// GET "/" - lists first 5 posts
 get("/", function() {
     var self = this;
     fs.readdir(__dirname + '/posts', function(err, files){
@@ -38,6 +24,11 @@ get("/", function() {
             posts:Post.all(files) 
         }});
     });  
+});
+
+// GET "/page/2" - lists 5 posts for the page passed
+get("/page/:n", function(){
+    
 });
 
 // GET "/about"
@@ -50,15 +41,25 @@ get("/rss", function(){
     this.render("rss.xml.ejs");
 });
 
-// GET "/archive"
-// GET "/archive/2010/10"
+// GET "/archive" - shows a summary of all posts by year/month
 get("/archive", function(){
     this.render("archive.html.ejs");
 });
 
+// GET "/archive/2010" - shows posts for year
+get("/archive/:year",function(){
+    return "no implemented" 
+});
+
+// GET "/archive/2010/10"
+get("/archive/:year/:month",function(){
+    return "no implemented" 
+});
+
+// helper for rendering posts!
 var renderPost = function() {
     this.render("post.html.ejs", {locals:{
-        post:new Post('2010-05-10-title-of-article.md')
+        post:Post.create('2010-05-10-title-of-article.md')
     }});
 };
 

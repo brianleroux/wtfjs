@@ -1,5 +1,11 @@
 body {
     font-family:Helvetica, Verdana, Sans-Serif;
+    padding:20px;
+    margin:0;
+}
+
+h1 {
+    font-size:19pt;
 }
 
 #wrap {
@@ -48,11 +54,19 @@ body {
 }    
 
 #content {
-    
+
 }
 
 #foot {
-    background:#000;
+    clear:both;
+    margin:0;
+    padding:0;
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#666666), to(#010F01));
+    background:-moz-linear-gradient(19% 75% 90deg,#ababab, #c9c9c9, #c7c7c7 100%);
+    border:1px solid #5d6778;
+    border-radius:5px;
+    height:48px;
+    width:800px;
 }
 
 .clear {

@@ -1,2 +1,33 @@
 <h1>about</h1>
-<p>wtfjs.com has originally started as a tumblr tumblog where we utilized gists for the code. that made ppl all like, "wtf dude". </p>
+<p>JavaScript is a language we love despite it giving us so much to hate. This is a collection of those very special irregularities, inconstancies and just plain painfully unintuitive moments for the language of the web. JavaScript is <em>everywhere</em>.</p>
+
+
+<h2>contributing authors</h2>
+<p>These fine folk have been the brave warriors of code whom kicked out a wtf for your laughter (or perhaps empathetic tears).</p>
+<ul>
+    <li>brianleroux</li>
+</ul>
+<p>Interested in joining the list above? Read this post for more info.</p>
+
+
+<h2>building your own</h2>
+<p>Way back in the day, <a href="http://wtfjs.com">wtfjs.com</a> was a <a href="http://tumblr.com">tumblr tumblog</a> where I embeded <a href="http://gist.github.com">github gists</a> for the code. It was supposed to be a quick and dirty place to capture those special js moments. Unfortuately, the use of gists made ppl all like, "wtf dude", when the code samples (arguably the entire reason for wanting to see the site) where not visible due to the embedded js nature of gists. </p>
+<p>At that point, there was only 10^2000000 javascript frameworks inspired by Sinatra. But seriously, the ability to author a site about javascript <em>with javascript</em> while possible was still a pain in the ass. But I got off my lazy ass and if you are reading this then the Great Rewrite thwarted statistical failure. I decided to use this site as an opportunity to play with some of the most bleeding edge javascript hackery going on the server today.</p>
+<ul>
+    <li>nodejs</li>
+    <li>expressjs</li>
+    <li>showdown</li>
+</ul>
+<p>Deployment of NodeJS projects is <em>super simple</em> with Heroku. You can get the source on github.</p>
+
+
+<h3>templating</h3>
+<p>Nothing is perfect. And sometimes shit is just plain wack. The expressjs framework is seriously awesome but it has a hardon for haml which solves problems I do not have. I opted, out of lazyness, for ejs which is not beautiful but functional. I'd love to reauthor with mustachejs.</p>
+    
+    
+<h3>testing</h3>    
+<p>The testing situation around here is presently dire. ExpressJS utilizes JSSpec which is good. I tend to prefer qUnit with shoulda-js sugar.</p>    
+     
+<h3>persistance</h3>
+<p>Inspired by Jekyll, Toto and perhaps Scantly I opted to allow posts to be authored in nothing more than simple markdown. Perhaps there is a better way. </p>
+

@@ -1,3 +1,11 @@
+require.paths.unshift("vendor/showdown-v0.9/src");
+
+var sd = require("showdown")
+,   fs = require("fs")
+,   sys = require("sys")
+,   path = require("path");
+
+
 exports.Post = function(filename){
     this.filename = filename;
 };
@@ -8,7 +16,12 @@ exports.all = function(files) {
     });
 };
 
+exports.create = function(f) {
+    return new exports.Post(f)
+};
+
 exports.Post.prototype = {
+    
     created: function() {
         var e = this.filename.slice(0,3)
         ,   y = e[0]
@@ -31,7 +44,8 @@ exports.Post.prototype = {
         return '<a href="/' + theDate  + '/' + article + '">' + this.title() + '</a>' 
     },
     html: function() {
-        var text = "Markdown *rocks*.";
-        return sd.md2html(text);
+        var p = path.normalize(path.join(__dirname, "..", "posts", this.filename))
+        ,   t = fs.readFileSync(p);
+        return sd.md2html(t);
     }
 };
