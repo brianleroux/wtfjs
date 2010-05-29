@@ -8,6 +8,11 @@ h1 {
     font-size:19pt;
 }
 
+h1 a {
+    text-decoration:none;
+    color:#333;
+}
+
 pre {
     border:1px solid #5d6778;
     border-radius:5px;
@@ -43,7 +48,7 @@ pre {
 }
 
 #nav li a {
-    color:#ccc;
+    color:#fff;
     text-decoration:none;
     font-size:19pt;
     display:block;
