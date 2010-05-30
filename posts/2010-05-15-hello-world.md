@@ -6,7 +6,7 @@ Anyhow, welcome to the new blog. Here's the score:
 - Microframework! Utilizes the awesome sauce that is <a href="http://expressjs.com">ExpressJS</a>.
 - Totally open source. <a href="http://github.com/brianleroux/wtfjs">Fork wtfjs.com GitHub.</a>
 
-Sure, there were a few wtf's along the way. Heroku literally just squeezed NodeJS hosting before Joyent a few short weeks ago and it is not without a couple of occasional rough edges. 
+Sure, there were a few wtf's along the way. Heroku literally just squeezed NodeJS hosting a few short weeks ago and it is not without a couple of occasional rough edges. 
 
 The bonus of this reauthor is also an improved workflow for contribution. Fork the repo. Add your post in the posts folder. Send me a pull request. Easy.
 
@@ -15,6 +15,6 @@ what did I learn?
 
 - Package management in serverside js land is still a total fuck up.
 - Heroku and Express have awesome communities; whenever I had a question folks really helped.
-- The future is near! This code blog can be forked and deployed in a matter of a minute. 
+- jsftw! The future is here. This code blog can be forked and deployed live in literally one minute. 
 
 Have fun! - <a href="http://twitter.com/brianleroux">brianleroux</a>
