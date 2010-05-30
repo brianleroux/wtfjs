@@ -31,14 +31,15 @@ The code is pretty straightforward. Hack away!
     |-lib
     | |-express ........................... web framework ............ http://expressjs.com
     | |-showdown .......................... markdown ................. http://attacklab.net/showdown (hacked up to run serverside)
-    | '-wtfjs ............................. the blog code ............ Perhaps this should be its own git repo.
+    | '-wtfjs ............................. the blog code ............ Perhaps this should be its own git repo?
     |   |-public .......................... imgs, css and client js 
-    |   |-views ........................... srsly
+    |   |-views ........................... view templates
     |   |-post.js ......................... post model
-    |   '-wtf.js .......................... blog routes
+    |   '-wtf.js .......................... routes controller
     | 
     |-posts
     | '-2010-05-10-hello-world.md ........ typical post format
     |
     '-server.js .......................... where it all begins
     
+wtfjs.com was created by [@brianleroux](http://twitter.com/brianleroux). Everything here is under the WTFPL 2.0 license.
