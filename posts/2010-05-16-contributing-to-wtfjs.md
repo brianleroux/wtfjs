@@ -1,19 +1,20 @@
-You can either fix up the wtf's here or help broadcast wtf's to the rest of the world!
+You can either fix up the wtfs here or help broadcast wtfs to the rest of the world!
 
 contributing an article
 =======================
 
+<a href="http://github.com/brianleroux/wtfjs">Fork the source on GitHub</a> and then add your post to the posts/ folder. The title has to be of the format: 
+
+**_yyyy-mm-dd-title-of-article.md_**
+
+The post itself is markdown. Code blocks go into a code element. Its assumed any code is JavaScript (and subsequently syntax highlighted as such) but you can specify other language types. You might have to grab <a href="http://shjs.sourceforge.net/lang/">extra language files</a>. Thats it.
 
 contributing code
 =================
 
-maybe you found a bug or something writ here in the all the open source glory is driving you crazy. perhaps you want to give back. there's some good ideas where to start here.
+Maybe you found a bug or something is driving you crazy. Perhaps you want to give back. Theres always something TODO and I've littered a few FIXME's around for the adventurous. 
 
-<code>
-    fork on github
-    fix fix fix
-    send pull request
-    add yourself to code committers file
-</code>
+either way
+==========
 
-if I like what I see then it will be immediately commited back and deployed. dont' 
+Fork it. Send me a pull request. Don't forget to add yourself as a committer to the /about page.

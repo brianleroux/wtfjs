@@ -1,4 +1,4 @@
-Syntax highlighting seems like a solved problem. Over solved. It would appear that the production of Sinatra clones and Syntax Highlighters are escalating. Perhaps its a sign.
+Syntax highlighting seems like a solved problem. Over solved. To make matters worse it appears that the production of Sinatra clones and Syntax Highlighters are escalating. Perhaps its a sign.
 
 After struggling w/ the overly complex Chili jQuery plugin I had a second look at the classic Syntax Highlighter which, while palatable, feels like overkill. Its a bummer b/c I would prefer a highlighter than can deal w/ nested DOM elements. Pygments does all this but Heroku won't let play with the sandbox, and I didn't want to pre-process the markdown treating it like an intermediate format, so I settled on SHJS which has the right characteristics: lightweight, simple install and straightforward docs. 
 

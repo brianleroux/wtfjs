@@ -1,27 +1,20 @@
-At first, wtfjs was a silly little thought experiment. Almost like a solution log except documenting potential traps instead of, ya know, actual solutions! I set the whole thing up in 10 minutes w/ Tumblr and the help of GitHub's awesome Gists. This served us well enough to get things started but of course there where aspects of wtfjs that could be improved. The rss feed didn't show the code because it came from a gist embed. Hosting the site utilizing JavaScript on the server is another obvious improvement. For purity. And science. 
+At first, wtfjs was a silly little thought experiment. Almost like a solution log except documenting potential traps instead of, ya know, actual solutions! I set the whole thing up in 10 minutes w/ <a href="http://tumblr.com">Tumblr</a> and the help of <a href="http://gist.github.com/">GitHub Gists</a>. This served well enough to get things started but, as always, there was room for improvement. The rss feed didn't show the code samples. Hosting a site about JavaScript should probably be written <em>in JavaScript</em>. For purity. And science. 
 
 Anyhow, welcome to the new blog. Here's the score:
 
-- 100% cloud friendly SSJS. Deployed on Heroku's new fabulous NodeJS service.
-- Microframework! Utilizes the awesome sauce that is ExpressJS.
-- Totally open source. Fork me GitHub.
+- 100% cloud friendly SSJS. Deployed on <a href="http://heroku.com">Heroku</a> with <a href="http://nodejs.com">NodeJS</a>.
+- Microframework! Utilizes the awesome sauce that is <a href="http://expressjs.com">ExpressJS</a>.
+- Totally open source. <a href="http://github.com/brianleroux/wtfjs">Fork wtfjs.com GitHub.</a>
 
-Sure, there were a few wtf's along the way. Heroku literally just squeezed NodeJS hosting before Joyent a few short weeks ago and it is not without rough edges. 
+Sure, there were a few wtf's along the way. Heroku literally just squeezed NodeJS hosting before Joyent a few short weeks ago and it is not without a couple of occasional rough edges. 
 
-What more is there to say? Lots. Improved workflow for contribution. A deeper look at the app code here.
+The bonus of this reauthor is also an improved workflow for contribution. Fork the repo. Add your post in the posts folder. Send me a pull request. Easy.
 
-<code>
-    get("/about", function(){
-        this.render("about.html.ejs");
-    });
-</code>
+what did I learn?
+---
 
-Looks nice, eh! You can see this source here. That's right. No database. Just simple markdown files.
-
-What did I learn?
-
-- package mgmt is still a total fuck up
-- both heroku and express have awesome communities / when it wasn't documented they helped
-- the future is near. blog can be forked and deployed in a matter of a minute
+- Package management in serverside js land is still a total fuck up.
+- Heroku and Express have awesome communities; whenever I had a question folks really helped.
+- The future is near! This code blog can be forked and deployed in a matter of a minute. 
 
 Have fun! - <a href="http://twitter.com/brianleroux">brianleroux</a>
