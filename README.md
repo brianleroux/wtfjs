@@ -42,4 +42,4 @@ The code is pretty straightforward. Hack away!
     |
     '-server.js .......................... where it all begins
     
-wtfjs.com was created by [@brianleroux](http://twitter.com/brianleroux). Everything here is under the WTFPL 2.0 license.
+http://wtfjs.com was created by [@brianleroux](http://twitter.com/brianleroux). Everything here is under the WTFPL 2.0 license.
