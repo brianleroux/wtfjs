@@ -47,6 +47,7 @@ hr {
     background:-moz-linear-gradient(19% 75% 90deg,#ababab, #c9c9c9, #c7c7c7 100%);
     border:1px solid #5d6778;
     border-radius:5px;
+    -moz-border-radius: 5px;
     height:48px;
 }
 
@@ -90,6 +91,7 @@ hr {
     background:#eaeaea;
     border:1px solid #eaeaea;
     border-radius:5px;
+    -moz-border-radius: 5px;
 }
 
 #prev {
@@ -119,6 +121,7 @@ hr {
     background:-moz-linear-gradient(19% 75% 90deg,#ababab, #c9c9c9, #c7c7c7 100%);
     border:1px solid #5d6778;
     border-radius:5px;
+    -moz-border-radius: 5px;
     height:48px;
     width:800px;
     text-align:center;
