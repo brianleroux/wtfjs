@@ -9,4 +9,4 @@
     1 + / + + + / + 1    // => 1/ + + + /1
 </code>
 
-[Be sure to read the comments! ](http://mir.aculo.us/2010/05/28/valid-javascript-or-not/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+miraculous+(mir.aculo.us))
+[Be sure to read the comments! ](http://mir.aculo.us/2010/05/28/valid-javascript-or-not/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+miraculous+(mir.aculo.us)
