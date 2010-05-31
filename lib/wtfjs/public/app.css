@@ -18,6 +18,7 @@ h1 a {
 pre {
     border:1px solid #5d6778;
     border-radius:5px;
+    -moz-border-radius: 5px;
     padding:10px 10px 20px 0;
 }
 
