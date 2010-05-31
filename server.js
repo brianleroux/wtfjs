@@ -1,6 +1,7 @@
 require.paths.unshift("lib/express/lib");
 require.paths.unshift("lib/wtfjs");
 require.paths.unshift("lib/showdown-v0.9/src");
+require.paths.unshift("lib/prettyfy");
 
 require("express");
 require("express/plugins");

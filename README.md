@@ -1,11 +1,18 @@
-wtfjs.com
----------
-
-A pure JavaScript code blog. 
+<pre>    
+    :::       ::::::::::::::::::::::::::::::::::::::::::: 
+    :+:       :+:    :+:    :+:           :+:   :+:    :+:
+    +:+       +:+    +:+    +:+           +:+   +:+       
+    +#+  +:+  +#+    +#+    :#::+::#      +#+   +#++:++#++
+    +#+ +#+#+ +#+    +#+    +#+           +#+          +#+
+     #+#+# #+#+#     #+#    #+#       #+# #+#   #+#    #+#
+      ###   ###      ###    ###        #####     ######## 
+      ---------------------------------------------------
+      A pure JavaScript code blog. 
+</pre>    
 
 
 share your wtfjs moment
-=======================
+---
 
 It has never been easier to contribute a wtf to wtfjs.com!
 
@@ -14,7 +21,7 @@ It has never been easier to contribute a wtf to wtfjs.com!
 - send a pull request
 
 the code
-========
+---
 
 I'm debating separating the blog from the code blog. If there's interest; I'll do it. In the meantime to run this code blog open your terminal and...    
     
