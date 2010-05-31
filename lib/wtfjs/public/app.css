@@ -47,7 +47,7 @@ hr {
     margin:0;
     padding:0;
     background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#666666), to(#010F01));
-    background:-moz-linear-gradient(19% 75% 90deg,#ababab, #c9c9c9, #c7c7c7 100%);
+    background:-moz-linear-gradient(top, #666666, #010F01);  
     border:1px solid #5d6778;
     border-radius:5px;
     -moz-border-radius: 5px;
@@ -67,7 +67,7 @@ hr {
     font-size:11pt;
     display:block;
     float:left;
-    padding:0 10px 0 20px;
+    padding:0 20px 0 20px;
     line-height:46px;
     text-shadow: 0px -1px 0px #000;
     
@@ -75,7 +75,7 @@ hr {
 
 #nav ul li a:hover {
     background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(#010F01));
-    background:-moz-linear-gradient(19% 75% 90deg,#ababab, #c9c9c9, #c7c7c7 100%);
+    background:-moz-linear-gradient(top, #000, #010F01);  
 }    
 
 #nav ul li:first-child a {
@@ -121,7 +121,7 @@ hr {
     margin:0;
     padding:0;
     background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#666666), to(#010F01));
-    background:-moz-linear-gradient(19% 75% 90deg,#ababab, #c9c9c9, #c7c7c7 100%);
+    background:-moz-linear-gradient(top, #666666, #010F01);  
     border:1px solid #5d6778;
     border-radius:5px;
     -moz-border-radius: 5px;
