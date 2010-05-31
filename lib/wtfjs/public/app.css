@@ -26,6 +26,7 @@ hr {
     background-color: #eaeaea;
     height: 10px;
     border-radius:5px;
+    -moz-border-radius: 5px;
 }
 
 #wrap {
@@ -36,6 +37,7 @@ hr {
 #nav {
     border:1px solid #000;
     border-radius:5px;
+    -moz-border-radius: 5px;
     height:50px;
 }
 
