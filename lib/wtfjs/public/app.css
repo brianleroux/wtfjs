@@ -140,3 +140,7 @@ hr {
 .clear {
     clear:both;
 }
+
+.date {
+  color: #666666;
+}
