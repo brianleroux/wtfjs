@@ -23,6 +23,8 @@ It has never been easier to contribute a wtf to wtfjs.com!
 the code
 ---
 
+Currently supported Node: **v0.1.96**.
+
 I'm debating separating the blog from the code blog. If there's interest; I'll do it. In the meantime to run this code blog open your terminal and...    
     
     $ node server.js
