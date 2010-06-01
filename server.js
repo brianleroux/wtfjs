@@ -7,4 +7,13 @@ require("express");
 require("express/plugins");
 require("wtf");
 
+// config block; sorta fugly
+configure(function() {
+    set('root', __dirname + '/lib/wtfjs');
+    // set('views', __dirname + '/views');
+    use(Logger);
+    use(Static);
+    enable('show exceptions');
+});
+
 run(parseInt(process.env.PORT || 8000), null);
