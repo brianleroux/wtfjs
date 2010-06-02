@@ -26,4 +26,4 @@ This is even more confusing when using the JSON-style syntax to create objects a
 
 -- [@remi](http://twitter.com/remi)
 
-(Never forget: `====` - [@brianleroux](http://twitter.com/brianleroux))
+(Never forget: [====](http://crockfordfacts.com/MHDTvKwy3xGzI183Akuh_Q) - [@brianleroux](http://twitter.com/brianleroux))
