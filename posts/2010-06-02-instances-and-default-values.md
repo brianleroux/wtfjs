@@ -25,3 +25,5 @@ This is even more confusing when using the JSON-style syntax to create objects a
 </code>
 
 -- [@remi](http://twitter.com/remi)
+
+(Never forget: `====` - [@brianleroux](http://twitter.com/brianleroux))
