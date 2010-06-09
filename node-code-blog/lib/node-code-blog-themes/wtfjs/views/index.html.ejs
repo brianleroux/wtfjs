@@ -1,0 +1,18 @@
+
+<% for (var i = 0; i < posts.length; i++) { %>
+   <article>
+       <h1><%= posts[i].anchor() %></h1>
+       <div class="date"><%= posts[i].created().format("%b %e, %Y") %></div>
+       <div class="body"><%= posts[i].html() %></div>
+       <hr />
+   </article>
+<% } %>
+
+<div id="pager">
+    <% if (prevPage > 1) { %>
+    <a id="prev" href="/page/<%= prevPage %>">&larr;</a>
+    <% } %>
+    <% if (page != max) { %>
+    <a id="next" href="/page/<%= nextPage %>">&rarr;</a> 
+    <% } %>
+</div>
