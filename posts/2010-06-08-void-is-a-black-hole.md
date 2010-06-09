@@ -4,3 +4,5 @@ Void is a blackhole...
     var void = function () {}
     //=> SyntaxError: missing variable name
 </code>
+
+-- [@rwaldron](http://twitter.com/rwaldron)
