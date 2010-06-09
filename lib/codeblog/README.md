@@ -83,6 +83,8 @@ Crack open `/server.js` and add the following [ExpressJS](http://expressjs.com) 
             }});
         });
         
+        init();
+        
 Of course this means _anything_ Node can do so can your CodeBlog. Gnarly, eh.
 
 CodeBlog is [free software]() extracted from the redevelopment of [wtfjs](http://wtfjs.com) by [Brian LeRoux](http://twitter.com/brianleroux).
