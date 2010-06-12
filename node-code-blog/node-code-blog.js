@@ -21,7 +21,7 @@ get("/page/:n", Post.paginate);
 
 // GET "/about"
 get("/about", function(){
-    this.render("about.html.ejs");
+    this.display("about.html.ejs");
 });
 
 // GET "/rss"
@@ -36,7 +36,7 @@ get("/rss", function(){
 
 // GET "/archive" - shows a summary of all posts by year/month
 get("/archive", function() {
-    this.render("archive.html.ejs");
+    this.display("archive.html.ejs");
 });
 
 // GET "/archive/2010" - shows posts for year
@@ -54,5 +54,5 @@ get("/:y/:m/:d/:title", function() {
     var args  = [].splice.call(arguments, 0)
     ,   title = args.join('-') + '.md'
     ,   post  = Post.create(title);
-    this.render("post.html.ejs", {locals:{ post:post }});
+    this.display("post.html.ejs", {post:post});
 });

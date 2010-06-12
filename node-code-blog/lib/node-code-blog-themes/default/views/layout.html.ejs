@@ -1,22 +1,22 @@
 <!DOCTYPE html> <!-- OOoooooh HTML5! -->
 <html>
     <head>
-        <title>WTFJS</title>
+        <title>wtfjs</title>
         <link rel="stylesheet" href="/public/app.css" type="text/css" charset="utf-8" />
         <link rel="alternate" type="application/rss+xml" title="RSS Feed for http://wtfjs.com" href="/rss/" />
         <link rel="icon" href="/public/favicon.ico" type="image/x-icon" /> 
         <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
     </head>
     <body>
+        <div id="nav">
+            <ul>
+                <li><a href="/">wtfjs</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/rss">rss</a></li>
+                <li><a href="/archive">archive</a></li>
+            </ul>
+        </div>
         <div id="wrap">
-            <div id="nav">
-                <ul>
-                    <li><a href="/">wtfjs</a></li>
-                    <li><a href="/about">about</a></li>
-                    <li><a href="/rss">rss</a></li>
-                    <li><a href="/archive">archive</a></li>
-                </ul>
-            </div>
             <div id="content"><%= body %></div>
             <div id="foot">wtfjs is <a href="/license">free software</a>. get the <a href="http://github.com/brianleroux/wtfjs">source on github</a>. </div>
         </div>

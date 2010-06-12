@@ -31,14 +31,14 @@ Post.paginate = function(page) {
         ,   prev  = cur - 1
         ,   start = cur == 1 ? 0 : prev*count
         ,   end   = start >= count ? start+count : count;
-
-        self.render('index.html.ejs', {locals:{ 
+        
+        self.display('index.html.ejs', {
             posts:    posts.slice(start, end),
             page:     cur,
             max:      max,
             nextPage: next > max ? max : next,
             prevPage: prev == 0 ? 1 : prev
-        }});
+        });
     });
 };
 

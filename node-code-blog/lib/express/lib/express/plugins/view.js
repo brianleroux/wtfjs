@@ -109,6 +109,21 @@ exports.View = Plugin.extend({
           } else
             return this.render(view, options)
         },
+        
+        
+        // kludge to add global vars accessible to express layout
+        // also hides most of the express dsl in case I decide to ditch it
+        display: function(template, locals) {
+            var l = locals || {};
+            Object.merge(l, {
+                title:      set('title'),
+                domain:     set('domain'),
+                desciption: set('desciption'),
+                analytics:  set('analytics')
+            });
+            this.render(template, {locals:l});
+        },
+        
 
         /**
          * Render _view_ with _options_.
