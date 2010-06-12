@@ -1,7 +1,7 @@
 node-code-blog
 ===
 
-A pure JavaScript code blog backed up by Git and Node: **v0.1.96**. Everything you need (_and nothin you do not_) to get a simple coder friendly blog up and running _super fast_.
+A pure JavaScript code blog backed up by Git and Node **v0.1.96**. Everything you need (_and nothin you do not_) to get a simple coder friendly blog up and running _super fast_.
 
 Features
 ---
@@ -10,23 +10,12 @@ Features
 - Posts with `<code>` elements are auto syntax highlighted.
 - Automagic pagination and permalinks.
 - RSS 2.0 feed.
-- Heroku friendly.
+- Heroku NodeJS service friendly.
 
 Quickstart
 ---
 
-[Download the example node-code-blog]() and from the root in your terminal run `node server.js`. Congrats on your new `node-code-blog`! 
-
-Maintainable start
----
-
-[Copy this Gist]() and run in your terminal with `./generate-code-blog` or follow these steps:
-
-1. Download the example CodeBlog and delete the `node-code-blog` folder. 
-2. Initialize it as a Git Repo.
-3. Add node-code-blog as a Git Submodule.
-4. Push it to your GitHub and/or Heroku deployment.
-5. Happy dance! 
+[Download the node-code-blog-example](http://github.com/brianleroux/node-code-blog-example) and from the root in your terminal run `node server.js`. Congrats on your new `node-code-blog`! 
 
 The example `node-code-blog` directory structure looks like this:
 
@@ -38,15 +27,19 @@ The example `node-code-blog` directory structure looks like this:
     |
     '-server.js ........................... Heroku NodeJS friendly config.
 
+Edit the config variables in `server.js` to suite your blog settings.
+
 Posting
 ---
 
-To post simply add a new Markdown file to the `/posts` directory. [Markdown reference here.](http://daringfireball.net/projects/markdown/)
+To post simply add a new Markdown file to the `/posts` directory. [Markdown reference here.](http://daringfireball.net/projects/markdown/) This makes it super easy to collaborate with other Git inclined folk.
 
 Theming
 ---
 
-Themes are found under `lib/node-code-blog/themes`. Create your own theme by copying the default theme directory, renaming it and editing `/public/app.css` and the EJS templates found in `/views`. 
+Change themes with the theme setting in the config block in `server.js`. Available themes can be found under `lib/node-code-blog/themes`. 
+
+Create your own theme by copying the default theme directory, renaming it and editing `/public/app.css` and the EJS templates found in `/views`. If its cool, you should fork the `node-code-blog` repo and contribute it back to the project, eh.
 
 Adding pages
 ---
@@ -70,6 +63,6 @@ Crack open `/server.js` and add the following route:
         
         init();
         
-This is saying: whenever you there is a GET request to `/contact` display the `contact.html.ejs` template and pass it these local variables. EJS is super powerful too. Check out the wtfjs theme for more examples. And, of course, all this means _anything_ Node can do so can your `node-code-blog`. Gnarly, eh.
+This code is saying: whenever there is a GET request to `/contact` display the `contact.html.ejs` template and pass it these local variables. EJS is super powerful too. Check out the wtfjs theme for more examples. And, of course, all this means _anything_ Node can do so can your `node-code-blog`. Gnarly, eh.
 
 `node-code-blog` is [free software](http://wtfjs.com/license) extracted from the redevelopment of [wtfjs](http://wtfjs.com) by [Brian LeRoux](http://twitter.com/brianleroux).
