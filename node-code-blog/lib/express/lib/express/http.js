@@ -57,7 +57,16 @@ function request(method, url, data, headers, callback, redirects, first) {
       else
         callback(new Error('maximum number of redirects reached'), '', res)
     else {
-      res.setBodyEncoding('utf8')
+
+      
+      // FIXME hack for 0.1.98 compat
+      try {
+          req.setEncoding('utf8')
+      } catch(e) {
+          req.setBodyEncoding('utf8')
+      }
+      
+      
       res
         .addListener('data', function(chunk){ buf += chunk })
         .addListener('end', function(){ callback(null, buf, res) })

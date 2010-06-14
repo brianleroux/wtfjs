@@ -94,7 +94,7 @@ Post.prototype = {
     html: function() {
         // read in the post text
         var p = path.normalize(path.join(__dirname, "..", "posts", this.filename))
-        ,   t = fs.readFileSync(p);
+        ,   t = fs.readFileSync(p).toString();
         
         // replace the raw code blocks with prettyfied html
         t = t.replace(/<code>[^<]+<\/code>/g, function(code) {

@@ -1,3 +1,4 @@
+var sys = require('sys');
 
 /**
  * Compiled template cache.
@@ -11,7 +12,7 @@ exports.render = function(str, options) {
     new Function("locals",
       "var p=[],print=function(){p.push.apply(p,arguments);};" +
       "with(locals){p.push('" +
-      str
+      str.toString() // FIXME new kludge for node 0.1.98
         .replace(/[\r\t\n]/g, " ")
         .split("<%").join("\t")
         .replace(/((^|%>)[^\t]*)'/g, "$1\r")

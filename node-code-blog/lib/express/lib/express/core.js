@@ -209,7 +209,14 @@ Server = new Class({
     var server = http
       .createServer(function(req, response){
         var request, pendingFiles = 0
-        req.setBodyEncoding('binary')
+        
+        // FIXME hack for 0.1.98 compat
+        try {
+            req.setEncoding('binary')
+        } catch(e) {
+            req.setBodyEncoding('binary')
+        }
+        
         request = new Request(req, response)
         request.body = ''
         function callback(err) {
