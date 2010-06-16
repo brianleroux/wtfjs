@@ -20,7 +20,7 @@ But what happens if we try to add a method for this to the Number prototype?
     // returns false!
 </code>
 
-Why? It turns out that when you add methods to Number, the type of the number inside the method becomes "object" rather than "number", but Math.floor returns a result of type "number". So the method can be fixed two ways.
+Why? It turns out that when you add methods to Number, the type of the number inside the method becomes "object" rather than "number", but Math.floor returns a result of type "number". So the method can be fixed two ways. If you use the === operator, the two values are no longer equal because they're different types.
 
 Solution 1:
 
