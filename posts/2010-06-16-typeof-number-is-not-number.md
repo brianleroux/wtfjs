@@ -2,7 +2,7 @@ How do you determine if a number is an integer in JavaScript?
 
     x = 1;
     
-    x === Math.floor(1);
+    x === Math.floor(x);
     // returns true
 
 But what happens if we try to add a method for this to the Number prototype?
