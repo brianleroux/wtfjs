@@ -1,7 +1,7 @@
 node-code-blog
 ===
 
-A pure JavaScript code blog backed up by Git and Node **v0.1.96**. Everything you need (_and nothin you do not_) to get a simple coder friendly blog up and running _super fast_.
+A pure JavaScript code blog backed up by Git and Node **v0.1.96-v0.1.98**. Everything you need (_and nothin you do not_) to get a simple coder friendly blog up and running _super fast_.
 
 Features
 ---
@@ -10,6 +10,7 @@ Features
 - Posts with `<code>` elements are auto syntax highlighted.
 - Automagic pagination and permalinks.
 - RSS 2.0 feed.
+- Fully theme-able with custom pages, templates client and serverside logic.
 - Heroku NodeJS service friendly.
 
 Quickstart

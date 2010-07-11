@@ -1,3 +1,4 @@
+// VERSION 0.0.1
 require.paths.unshift(__dirname + "/lib/express/lib");
 require.paths.unshift(__dirname + "/lib/showdown-v0.9/src");
 require.paths.unshift(__dirname + "/lib/prettyfy");
