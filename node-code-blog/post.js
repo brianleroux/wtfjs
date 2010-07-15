@@ -11,12 +11,6 @@ var Post = function(filename){
 };
 
 Post.all = function(files) {
-    files = files.filter(function (f) {
-      if (0 === f.indexOf('.')) {
-        return false;
-      }
-      return true;
-    });
     return files.map(function(f) { 
         return new Post(f);
     });
@@ -101,16 +95,14 @@ Post.prototype = {
         // read in the post text
         var p = path.normalize(path.join(__dirname, "..", "posts", this.filename))
         ,   t = fs.readFileSync(p).toString();
-       
-        // markdown to html  
-        t = md2html(t);
-
+        
         // replace the raw code blocks with prettyfied html
         t = t.replace(/<code>[^<]+<\/code>/g, function(code) {
-            return "<code>" + prettyfy(code.match(/<code>([\s\S]+)<\/code>/)[1]) + "</code>";
+            return "<pre><code>" + prettyfy(code.match(/<code>([\s\S]+)<\/code>/)[1]) + "</code></pre>";
         });
         
-        return t;
+        // return markdown to html  
+        return md2html(t);
     }
 };
 
