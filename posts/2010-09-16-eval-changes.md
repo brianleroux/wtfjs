@@ -1,4 +1,4 @@
-eval() is a mysterious function. More so than people believe, hell its spec isn't even clear. And so i present... The three stages of eval denial.
+eval() is a mysterious function. More so than people believe, hell its spec isn't even clear. And so i present... The two stages of eval denial.
 
 Try out these functions with
 <code>
@@ -24,14 +24,9 @@ Doesn't seem so evil.
 <code>
 	function foo(x){var foo=1, bar=eval;bar(x);return foo;};
 
-	//[1, 2]
-</code>
+	//and just returning it, not saving it
 
-#### Apparently moving eval across a scope changes how it acts.
-WTFHITS
-
-<code>
 	function foo(x){var foo=1;(function(){return eval})(x);return foo;};
 
-	//[1, function foo(x){var foo=1,bar=eval;(function(){return bar})(x);return foo}]
+	//[1, 2]
 </code>
