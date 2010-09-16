@@ -1,12 +1,14 @@
 eval() is a mysterious function. More so than people believe, hell its spec isn't even clear. And so i present... The three stages of eval denial.
 
+Try out these functions with [foo("foo=2"),foo] and take that path.
+
 Tested on chrome, firefox ,opera, and safari
+
 
 #### Apparently eval is evil.
 Doesn't seem so evil.
 
 <code>
-
 	function foo(x){var foo=1;eval(x);return foo;};[foo("foo=2"),foo]
 
 	//[2,function foo(x){var foo=1;eval(x);return foo;}]
@@ -17,6 +19,7 @@ Doesn't seem so evil.
 
 <code>
 	function foo(x){var foo=1, bar=eval;bar(x);return foo;};[foo("foo=2"),foo]
+
 	//[1, 2]
 </code>
 
@@ -25,5 +28,6 @@ WTFHITS
 
 <code>
 	function foo(x){var foo=1, bar=eval;(function(){return bar})(x);return foo;};[foo("foo=2"),foo]
-	//[1, function foo(f,x,y){var foo=1,bar=eval;(function(){return bar})(x);return foo}]
+
+	//[1, function foo(x){var foo=1,bar=eval;(function(){return bar})(x);return foo}]
 </code>
