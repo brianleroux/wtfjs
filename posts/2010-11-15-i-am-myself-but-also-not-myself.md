@@ -7,3 +7,5 @@ console.log(foo == foo);
 </code>
 
 Is it time to have a "maybe" operator? :-P
+
+--- [@diogobaeder](http://twitter.com/diogobaeder)
