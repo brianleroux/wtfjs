@@ -21,14 +21,14 @@ part of the Final final final final draft Standard ECMA-262 5th edition (the doc
 
 [snip]
 
-> Object         Return a default value for the Object.  The default value of an object is retrieved by calling the [[DefaultValue]]
->                internal method of the object, passing the optional hint PreferredType.  The behavior of the [[DefaultValue]] internal
+> Object         Return a default value for the Object.  The default value of an object is retrieved by calling the `[[DefaultValue]]`
+>                internal method of the object, passing the optional hint PreferredType.  The behavior of the `[[DefaultValue]]` internal
 >                method is defined by this specification for all native ECMAScript objects in 8.12.8.
 
 So we're hinting to the [[DefaultValue]] method within Array with the type of `String`, so according (again) to the spec,
 8.12.8 [[DefaultValue]] (hint):
 
-> 1. Let toString be the results of calling the [[Get]] internal method of object O with argument "toString".
+> 1. Let toString be the results of calling the `[[Get]]` internal method of object O with argument "toString".
 
 Unless of course, `IsCallable(toString)` (i.e. the object has a `.toString` method on it's prototype).
 
@@ -39,12 +39,12 @@ And according to 15.4.4.2 Array.prototype.toString ():
 
 > When the toString method is called, the following steps are taken:
 >
-> 1. Let array be the result of calling ToObject on the this value.
-> 2. Let func be the result of calling the [[Get]] internal method of array with argument "join".
+> 1. Let array be the result of calling `ToObject` on the this value.
+> 2. Let func be the result of calling the `[[Get]]` internal method of array with argument "join".
 
 Oh, but we're not done yet!
 
-Stay with me - we're type-coersing to a string, and Array.prototype.toString calls Array.prototype.join with no arguments, so we're
+Stay with me - we're type-coersing to a string, and `Array.prototype.toString` calls `Array.prototype.join` with no arguments, so we're
 joining all the internal members of the array with the default separator is the single-character String "," (again, according to the spec).
 When an Array calls join on itself, it's going from 1 .. len (all it's members) and calling `ToString` on these members and concatenating
 them together.  Essentially doing this:
@@ -61,7 +61,7 @@ them together.  Essentially doing this:
     };
 
 So in the end, we end up with weird stuff like this actually working, as `[]`, `null`, and `undefined` all result in "" when their
-respective `ToPrimitive` methods ask for [[DefaultValue]] with String as the type hint.
+respective `ToPrimitive` methods ask for `[[DefaultValue]]` with String as the type hint.
 
 Another similar WTF on the same topic:
 
@@ -71,8 +71,8 @@ This is similar, but not quite the same.  When you call Array's constructor, if 
 members of the Array.  If you've only put 1 Integer (n) as the argument, an Array object is initiatilized with (n) `undefined` items.
 Again, from the spec 15.4.2.2 new Array (len):
 
->If the argument len is a Number and ToUint32(len) is equal to len, then the length property of the newly constructed object
->is set to ToUint32(len).
+>If the argument len is a `Number` and `ToUint32(len)` is equal to `len`, then the length property of the newly constructed object
+>is set to `ToUint32(len)`.
 
 So essentially end up with
 
@@ -82,7 +82,7 @@ Which yields something like:
 
     "" + String(undefined) + "," + String(undefined) + "," + String(undefined) + "," + String(undefined)
 
-Which ends up being ",,," (which evaluates to true, as it matches).
+Which ends up being ",,," (which evaluates to `true`, as it matches).
 
 Lastly, adding just one more level of WTF to this post, you can also accidentally (or intetionally?) add an expression within
 Array's constructor function (and you can also omit new, as the spec also says: "When Array is called as a function rather than as a
