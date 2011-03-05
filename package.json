@@ -1,0 +1,17 @@
+{
+  "name": "wtf",
+  "description": "The wtfs of javascript at wtfjs.com",
+  "version": "0.1.0",
+  "homepage": "wtfjs.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brianleroux/wtfjs.git"
+  },
+  "author": "Brian Leroux <brian@westcoastlogic.com> (brought into modernity by David Trejo)",
+  "directories": {
+    "lib": "lib/"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  }
+}
