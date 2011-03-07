@@ -1,8 +1,8 @@
 var fs        = require('fs')
 ,   sys       = require('sys')
 ,   path      = require('path')
-,   md2html   = require('markdown').toHTML
-,   prettyfy  = require('highlight').hl
+,   md2html   = require('showdown').md2html
+,   prettyfy  = require('highlight').Highlight
 ,   postsPath = path.join(__dirname, '/posts');
 
 
@@ -35,7 +35,11 @@ Post.page = function (page) {
 }
 
 // FIXME - this whole method is an embarassing gross. wtf!
-Post.rss = function (title, desc, domain) {
+Post.rss = function () {
+    var title  = 'wtfjs'
+    ,   desc   = 'wtfjs'
+    ,   domain = 'http://wtfjs.com'
+
     s = '<rss version="2.0">';
     s += '<channel>';
     s += '<description>' + desc + '</description>';
@@ -63,8 +67,8 @@ Post.prototype = {
         ,   y = e[0]
         ,   m = e[1] - 1 //wtfdate!
         ,   d = e[2]
-        ,   c = new Date(y, m, d);
-        return c;
+        ,   c = new Date(y, m, d)
+        return c
     },
     title: function() {
         var a = this.filename.split('-')
@@ -84,16 +88,16 @@ Post.prototype = {
     },
     html: function() {
         // read in the post text
-        var p = path.normalize(path.join(__dirname, "posts", this.filename))
-        ,   t = fs.readFileSync(p).toString();
+        var p = path.join(__dirname, "posts", this.filename)
+        ,   t = fs.readFileSync(p).toString()
         
         // replace the raw code blocks with prettyfied html
         t = t.replace(/<code>[^<]+<\/code>/g, function(code) {
             return "<pre><code>" + prettyfy(code.match(/<code>([\s\S]+)<\/code>/)[1]) + "</code></pre>";
-        });
-        
+        })
+
         // return markdown to html  
-        return md2html(t);
+        return md2html(t)
     }
 };
 

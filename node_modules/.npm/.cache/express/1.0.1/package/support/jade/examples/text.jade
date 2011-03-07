@@ -1,0 +1,19 @@
+form
+  label Username:
+    input(type='text', name='user[name]')
+    p
+      | Just an example of some text usage.
+      | You can have <em>inline</em> html,
+      | as well as
+      strong tags
+      | .
+
+      | Interpolation is also supported. The 
+      | username is currently "#{name}".
+
+  label Email:
+    input(type='text', name='user[email]')
+    p
+      | Email is currently
+      em= email
+      | .
