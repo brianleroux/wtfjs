@@ -1,46 +1,43 @@
-var fs = require('fs')
-,   sys = require('sys')
-,   path = require('path')
-,   md2html = require('showdown').md2html
-,   prettyfy = require('prettyfy').prettyPrintOne
-,   postsPath = path.join(__dirname, '..', '/posts');
+var fs        = require('fs')
+,   sys       = require('sys')
+,   path      = require('path')
+,   md2html   = require('markdown').toHTML
+,   prettyfy  = require('prettyfy').prettyPrintOne
+,   postsPath = path.join(__dirname, '/posts');
 
 
-var Post = function(filename){
-    this.filename = filename;
-};
+var Post = function (filename) { this.filename = filename }
 
-Post.all = function(files) {
+Post.all = function (files) {
     return files.map(function(f) { 
-        return new Post(f);
-    });
-};
+        return new Post(f)
+    })
+}
 
+// FIXME is this used?
 Post.create = function(f) {
     return new Post(f)
 };
 
 Post.paginate = function(page) {
-    var self = this;
-    fs.readdir(postsPath, function(err, files){
-        var posts = Post.all(files).reverse()
-        ,   count = 5
-        ,   max   = Math.ceil(posts.length/count)
-        ,   cur   = ~~page || 1
-        ,   next  = cur + 1
-        ,   prev  = cur - 1
-        ,   start = cur == 1 ? 0 : prev*count
-        ,   end   = start >= count ? start+count : count;
-        
-        self.display('index.html.ejs', {
-            posts:    posts.slice(start, end),
-            page:     cur,
-            max:      max,
-            nextPage: next > max ? max : next,
-            prevPage: prev == 0 ? 1 : prev
-        });
-    });
-};
+    var self = this
+    ,   files = fs.readdirSync(postsPath)
+    ,   posts = Post.all(files).reverse()
+    ,   count = 5
+    ,   max   = Math.ceil(posts.length/count)
+    ,   cur   = ~~page || 1
+    ,   next  = cur + 1
+    ,   prev  = cur - 1
+    ,   start = cur == 1 ? 0 : prev*count
+    ,   end   = start >= count ? start+count : count;
+    return { 
+        posts:    posts.slice(start, end)
+    ,   page:     cur
+    ,   max:      max
+    ,   nextPage: next > max ? max : next
+    ,   prevPage: prev == 0 ? 1 : prev
+    }
+}
 
 // FIXME - this whole method is an embarassing gross. wtf!
 Post.rss = function(title, desc, domain) {
@@ -64,7 +61,6 @@ Post.rss = function(title, desc, domain) {
     return s.replace(/&nbsp;/g, '&#160;'); // oh the irony! fixes webkit bug w/ &nbsp; in xml documents
 };
 
-// FIXME ...should be get/set
 Post.prototype = {
     
     created: function() {
@@ -93,7 +89,7 @@ Post.prototype = {
     },
     html: function() {
         // read in the post text
-        var p = path.normalize(path.join(__dirname, "..", "posts", this.filename))
+        var p = path.normalize(path.join(__dirname, "posts", this.filename))
         ,   t = fs.readFileSync(p).toString();
         
         // replace the raw code blocks with prettyfied html
