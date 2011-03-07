@@ -2,7 +2,9 @@ This installment of wtfjs has to do with the Abstract Equality Comparison Algori
 
 Let's take the following example:
 
+<code>
     new Array([],null,undefined,null) == ",,,"; // true
+</code>
 
 WTF? Why does this work?
 
@@ -49,6 +51,8 @@ joining all the internal members of the array with the default separator is the 
 When an Array calls join on itself, it's going from 1 .. len (all it's members) and calling `ToString` on these members and concatenating
 them together.  Essentially doing this:
 
+<code>
+    
     Array.prototype.join = function (separator) {
         var result = "";
         if ("undefined" === typeof separator) {
@@ -60,12 +64,16 @@ them together.  Essentially doing this:
         return result;
     };
 
+</code>
+
 So in the end, we end up with weird stuff like this actually working, as `[]`, `null`, and `undefined` all result in "" when their
 respective `ToPrimitive` methods ask for `[[DefaultValue]]` with String as the type hint.
 
 Another similar WTF on the same topic:
 
+<code>
     ",,," == new Array(4); // true
+</code>
 
 This is similar, but not quite the same.  When you call Array's constructor, if there are multiple arguments, they're intepretted as being
 members of the Array.  If you've only put 1 Integer (n) as the argument, an Array object is initiatilized with (n) `undefined` items.
@@ -76,11 +84,15 @@ Again, from the spec 15.4.2.2 new Array (len):
 
 So essentially end up with
 
+<code>
     [undefined,undefined,undefined,undefined].join(),
+</code>
 
 Which yields something like:
 
+<code>
     "" + String(undefined) + "," + String(undefined) + "," + String(undefined) + "," + String(undefined)
+</code>
 
 Which ends up being ",,," (which evaluates to `true`, as it matches).
 
@@ -90,7 +102,9 @@ constructor, it creates and initialises a new Array object.").
 
 So we can finally end up with the weirdest rendition of this WTF as so:
 
+<code>
     ",,," == Array((null,'cool',false,NaN,4)); // true
+</code>
 
 If this doesn't make you WTF, I'm not sure what will.
 
