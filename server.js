@@ -1,43 +1,37 @@
-/*
-config({ 
-    root:       __dirname,
-    theme:      'wtfjs',
-    title:      'wtfjs',
-    domain:     'wtfjs.com',
-    desciption: 'JavaScript is a language we love despite it giving us so much to hate. This is a collection of those very special irregularities, inconstancies and just plain painfully unintuitive moments for the language of the web.',
-    analytics:  'UA-190386-6'
-});
-*/
-
+require.paths.unshift('.')
 require.paths.unshift('node_modules')
 
-var express = require('express')
-  , app = express.createServer()
-  , get = app.get
-
-app.configure(function(){
-  app.use(express.methodOverride())
-  app.use(express.bodyDecoder())
-  app.use(app.router)
-  app.use(express.staticProvider(__dirname + '/public'))
+var Post    = require('post').Post
+,   express = require('express')
+,   app     = express.createServer()
+  
+app.configure(function() {
+    app.use(express.methodOverride())
+    app.use(express.bodyDecoder())
+    app.use(app.router)
+    app.use(express.staticProvider(__dirname + '/public'))
 })
 
 app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }))
-  app.use(express.logger())
+    app.use(express.errorHandler({ dumpExceptions: true, showStack: true }))
+    app.use(express.logger())
 })
 
 app.configure('production', function(){
-  app.use(express.errorHandler());
+    app.use(express.errorHandler())
 })
-
+  
 // GET "/" - lists first 5 get("/", Post.paginate);
+app.get('/', function(req, res) {
+    res.render('index.ejs', {locals:Post.page(1)})
+})
 
 // GET "/page/2" - lists 5 posts for the page passed
-get("/page/:n", function(req, res) {
-    res.render('index.html.ejs', {locals:Post.paginate})
+app.get("/page/:n", function(req, res) {
+   res.render('index.ejs')
 })
 
+/*
 // GET "/about"
 get("/about", function(){
     this.display("about.html.ejs");
@@ -68,4 +62,5 @@ get('/license', function() {
     return fs.readFileSync( path.normalize( path.join( __dirname, 'LICENSE' )));
 })
 
+*/
 app.listen(process.env.PORT || 4000)

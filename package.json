@@ -7,15 +7,16 @@
     "type": "git",
     "url": "git://github.com/brianleroux/wtfjs.git"
   },
-  "author": "Brian Leroux <brian@westcoastlogic.com> (brought into modernity by David Trejo)",
+  "author": "Brian Leroux <brian@westcoastlogic.com>",
   "directories": {
     "lib": "lib/"
   },
   "dependencies":{
-    "express":"",
+    "express":"1.0.1",
+    "connect":"0.5.4",
     "ejs":"",
     "markdown":"",
-    "prettyfy":""
+    "highlight":""
   },
   "engines": {
     "node": ">=0.4.0"

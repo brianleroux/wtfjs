@@ -1,23 +1,27 @@
 <!DOCTYPE html> <!-- OOoooooh HTML5! -->
 <html>
     <head>
-        <title><%= title %></title>
+        <title>wtfjs - a little code blog about that language we love despite giving us so much to hate</title>
         <link rel="stylesheet" href="/public/app.css" type="text/css" charset="utf-8" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed for http://<%= domain %>" href="/rss/" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for http://wtfjs.com" href="/rss/" />
         <link rel="icon" href="/public/favicon.ico" type="image/x-icon" /> 
         <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+        <!--
+        JavaScript is a language we love despite it giving us so much to hate. 
+        
+        This is a collection of those very special irregularities, inconstancies and just plain painfully unintuitive moments for the language of the web.
+        -->
     </head>
     <body>
         <div id="wrap">
             <div id="nav">
                 <ul>
-                    <li><a href="/"><%= title %></a></li>
+                    <li><a href="/">wtfjs</a></li>
                     <li><a href="/about">about</a></li>
                     <li><a href="/rss">rss</a></li>
-                    <li><a href="/archive">archive</a></li>
                 </ul>
             </div>
-            <div id="content"><%= body %></div>
+            <div id="content"><%- body %></div>
             <div id="foot">wtfjs is <a href="/license">free software</a>. get the <a href="http://github.com/brianleroux/wtfjs">source on github</a>. </div>
         </div>
         <a href="http://github.com/brianleroux/wtfjs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" /></a>
@@ -25,7 +29,7 @@
         <script src="/public/app.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">
             var _gaq = _gaq || [];
-             _gaq.push(['_setAccount', '<%= analytics %>']);
+             _gaq.push(['_setAccount', 'UA-190386-6']);
              _gaq.push(['_trackPageview']);
 
              (function() {

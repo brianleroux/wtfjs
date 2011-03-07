@@ -2,7 +2,7 @@ var fs        = require('fs')
 ,   sys       = require('sys')
 ,   path      = require('path')
 ,   md2html   = require('markdown').toHTML
-,   prettyfy  = require('prettyfy').prettyPrintOne
+,   prettyfy  = require('highlight').hl
 ,   postsPath = path.join(__dirname, '/posts');
 
 
@@ -14,12 +14,7 @@ Post.all = function (files) {
     })
 }
 
-// FIXME is this used?
-Post.create = function(f) {
-    return new Post(f)
-};
-
-Post.paginate = function(page) {
+Post.page = function (page) {
     var self = this
     ,   files = fs.readdirSync(postsPath)
     ,   posts = Post.all(files).reverse()
@@ -40,7 +35,7 @@ Post.paginate = function(page) {
 }
 
 // FIXME - this whole method is an embarassing gross. wtf!
-Post.rss = function(title, desc, domain) {
+Post.rss = function (title, desc, domain) {
     s = '<rss version="2.0">';
     s += '<channel>';
     s += '<description>' + desc + '</description>';
@@ -102,4 +97,4 @@ Post.prototype = {
     }
 };
 
-exports.Post = Post;
+exports.Post = Post
