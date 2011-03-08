@@ -1,4 +1,4 @@
-require.paths.unshift('.')
+require.paths.unshift('./lib')
 require.paths.unshift('node_modules')
 
 var Post = require('post').Post
@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
 
 // GET "/page/2" - lists 5 posts for the page passed
 app.get("/page/:n", function(req, res) {
-   res.render('index.ejs', {locals:Post.page(req.params['n'])})
+   res.render('index.ejs', {locals:Post.page(req.params.n)})
 })
 
 // GET "/2010/05/10/title-of-article" - post permalink
@@ -32,6 +32,7 @@ app.get("/rss", function(req, res) {
     res.send(Post.rss())
 })
 
+// FIXME ooooh sync method BaaaaaaAAAAAAaaaad!
 // GET "/license" - diplays the WTFPL
 app.get('/license', function(req, res) {
     res.send(fs.readFileSync(path.join(__dirname, 'LICENSE')))
