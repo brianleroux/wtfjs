@@ -59,7 +59,8 @@ them together.  Essentially doing this:
             separator = ",";
         }
         for (var k = 0, len = this.length; k < len; ++k && result += separator) {
-            result += this[k] !== null && this[k] !== undefined && "function" === typeof this[k].toString ? this[k].toString() : String(this[k]);
+            var isToS = this[k] !== null && this[k] !== undefined && "function" === typeof this[k].toString
+            result += isToS ? this[k].toString() : String(this[k]);
         }
         return result;
     };
