@@ -1,5 +1,4 @@
 require.paths.unshift('./lib')
-require.paths.unshift('node_modules')
 
 var Post = require('post').Post
 ,   fs   = require('fs')
@@ -32,10 +31,12 @@ app.get("/rss", function(req, res) {
     res.send(Post.rss())
 })
 
-// FIXME ooooh sync method BaaaaaaAAAAAAaaaad!
 // GET "/license" - diplays the WTFPL
 app.get('/license', function(req, res) {
-    res.send(fs.readFileSync(path.join(__dirname, 'LICENSE')))
+    fs.readFile(path.join(__dirname, 'LICENSE'), function(err, file) {
+		if (err) return res.send(err.message);
+	    res.send(file);
+    })
 })
 
 // GET "/about"
