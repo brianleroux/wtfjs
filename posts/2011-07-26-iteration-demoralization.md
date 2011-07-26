@@ -1,13 +1,17 @@
 See if you can guess what this will output:
 
-  function allNames() {
-    var names = [ 'dan', 'anthony', 'pavel' ];
-    for (name in names) {
-      console.log(name);
-    }
-  }
+<code>
 
-allNames();
+    function allNames() {
+      var names = [ 'dan', 'anthony', 'pavel' ];
+      for (name in names) {
+        console.log(name);
+      }
+    }
+    
+    allNames();
+
+</code>
 
 
 If you guessed this:
@@ -23,7 +27,8 @@ What you might not have guessed, is what this will output:
 
 
 <code>
-console.log(window.name);
+
+    console.log(window.name);
 
 </code>
 
