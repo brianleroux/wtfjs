@@ -1,6 +1,5 @@
 See if you can guess what this will output:
 
-<code>
     function allNames() {
       var names = [ 'dan', 'anthony', 'pavel' ];
       for (name in names) {
@@ -9,8 +8,6 @@ See if you can guess what this will output:
     }
     
     allNames();
-
-</code>
 
 
 If you guessed this:
@@ -25,10 +22,7 @@ If you guessed this:
 What you might not have guessed, is what this will output:
 
 
-<code>
     console.log(window.name);
-
-</code>
 
 its:
 
