@@ -29,6 +29,24 @@ its:
 > "2"
 
 
-Iteration is assignment, and without the use of the <code>var</code> keyword, you're really using the global object - which in the case of a browser is the window object.
+Iteration is assignment, and without the use of the <code>var</code> keyword, you're really using the <code>this</code> object - which in the context of a raw function declaration is the <code>window</code> object.
 
-Don't be too hard on your co-worker when you find his mistake :-)
+So the original function is equivalent to:
+
+    function allNames() {
+      var names = [ 'dan', 'anthony', 'pavel' ];
+      for (this.name in names) {
+        console.log(name);
+      }
+    }
+
+Which is also equivalent to:
+
+    function allNames() {
+      var names = [ 'dan', 'anthony', 'pavel' ];
+      for (window.name in names) {
+        console.log(name);
+      }
+    }
+    
+    
