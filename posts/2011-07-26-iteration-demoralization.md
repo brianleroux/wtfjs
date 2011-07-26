@@ -2,33 +2,22 @@ See if you can guess what this will output:
 
 <code>
 function allNames() {
-
   var names = [ 'dan', 'anthony', 'pavel' ];
-
-
   for (name in names) {
-
     console.log(name)
-
   }
-
 }
-
-
 </code>
 
 
 If you guessed this:
 
-> 'dan'
-
-> 'anthony'
-
-> 'pavel'
+> 'dan'<br/>
+> 'anthony'<br/>
+> 'pavel'<br/>
 
 
 ...then you are right! Congratulations!
-
 
 What you might not have guessed, is what this will output:
 
