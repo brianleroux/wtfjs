@@ -1,7 +1,6 @@
 See if you can guess what this will output:
 
 <code>
-
     function allNames() {
       var names = [ 'dan', 'anthony', 'pavel' ];
       for (name in names) {
@@ -27,7 +26,6 @@ What you might not have guessed, is what this will output:
 
 
 <code>
-
     console.log(window.name);
 
 </code>
