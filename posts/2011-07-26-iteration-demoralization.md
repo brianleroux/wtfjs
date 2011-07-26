@@ -12,9 +12,9 @@ See if you can guess what this will output:
 
 If you guessed this:
 
-> 'dan'<br/>
-> 'anthony'<br/>
-> 'pavel'<br/>
+> 0<br/>
+> 1<br/>
+> 2<br/>
 
 
 ...then you are right! Congratulations!
@@ -26,7 +26,7 @@ What you might not have guessed, is what this will output:
 
 its:
 
-> 'pavel'
+> "2"
 
 
 Iteration is assignment, and without the use of the <code>var</code> keyword, you're really using the global object - which in the case of a browser is the window object.
