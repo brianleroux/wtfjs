@@ -1,12 +1,14 @@
 See if you can guess what this will output:
 
 <code>
-function allNames() {
-  var names = [ 'dan', 'anthony', 'pavel' ];
-  for (name in names) {
-    console.log(name)
-  }
-}
+function allNames() {<br/>
+  var names = [ 'dan', 'anthony', 'pavel' ];<br/>
+  for (name in names) {<br/>
+    console.log(name);<br/>
+  }<br/>
+}<br/>
+<br/>
+allNames();<br/>
 </code>
 
 
