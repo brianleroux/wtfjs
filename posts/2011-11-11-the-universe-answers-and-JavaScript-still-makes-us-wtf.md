@@ -83,11 +83,13 @@ type hints (i.e. `5 + "2" = "52"`, not `7`).
 
 [snip]
 
->   If Type(lprim) is String or Type(rprim) is String, then
->     Return the String that is the result of concatenating ToString(lprim) followed
->     by ToString(rprim)
->   Return the result of applying the addition operation to ToNumber(lprim) and
->   ToNumber(rprim).
+> If Type(lprim) is String or Type(rprim) is String, then
+ 
+> Return the String that is the result of concatenating ToString(lprim) followed by ToString(rprim)
+
+> [Else,]
+
+> Return the result of applying the addition operation to ToNumber(lprim) and ToNumber(rprim).
 
 So this means we'll have to find out what which + is doing what.
 
