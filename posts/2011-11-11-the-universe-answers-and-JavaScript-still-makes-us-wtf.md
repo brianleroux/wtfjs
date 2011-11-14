@@ -99,8 +99,8 @@ understand for your fellow developers.  Note that every `-` flips the sign, but
 `+` does essentially nothing functionally to the result of the `UnaryExpression`
 (i.e.  `+1 === 1`).
 
-NOTE: Unary `+` can be useful to cast to numbers (hence the +new Date hack we
-often see to emulate Date.now()) and to guarantee you're casting to decimal
+NOTE: Unary `+` can be useful to cast to numbers (hence the `+new Date` hack we
+often see to emulate `Date.now()`) and to guarantee you're casting to decimal
 (i.e.  `+"013"` is `13` but `parseInt("013")` is `11`).  This method has the
 drawback, however, that it can't handle letters in the string (i.e. `+"1a"`
 gives `NaN` whereas `parseInt("1a")` gives `1`, and accidental octal conversion
