@@ -119,29 +119,29 @@ NOTE: This ignores your grammar teacher's rules about double negatives.
 Let's make this line into an expression tree.  After unary operators are
 evaluated, we have:
 
-            +
+              +
+  
+         "2"         +
 
-       "2"         +
-
-            *              - 
+              *              - 
    
-        /     "6"      1      "3"
+          /     "6"      1      "3"
 
-   "1"     "3"
+     "1"     "3"
 
 
 However, we don't know what types are implicitly cast yet.  Let's make another
 tree showing non-ambiguous operations (`/`, `*`, `-`):
 
-            +
+              +
 
-       "2"         +
+         "2"         +
+  
+              *              - 
 
-            *              - 
+          /      6       1       3 
 
-        /      6       1       3 
-
-    1       3 
+      1       3 
 
 
 This greatly simplifies the bottom of the tree as they're all now numbers. We
