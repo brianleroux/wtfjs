@@ -13,3 +13,5 @@ Due to the mutability of undefined, it is generally a better idea to check for u
     var a = {};
     typeof a.b == 'undefined'; // always true
 </code>
+
+– [@mathias](http://mathiasbynens.be/)
