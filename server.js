@@ -1,14 +1,14 @@
-require.paths.unshift('./lib')
-require.paths.unshift('node_modules')
-
-var Post = require('post').Post
+var post = require('./lib/post')
+,   Post = post.Post
 ,   fs   = require('fs')
 ,   path = require('path')
-,   app  = require('config').app
+,   app  = require('./lib/config').app
+,   PORT = process.env.PORT || 4000
+,   LICENSE = fs.readFileSync(path.join(__dirname, 'LICENSE'))
 
 // GET "/" - lists first 5 get("/", Post.paginate);
 app.get('/', function(req, res) {
-    res.render('index.ejs', {locals:Post.page(1)})
+    res.render('index.ejs', Post.page(1))
 })
 
 // GET "/page/2" - lists 5 posts for the page passed
@@ -32,10 +32,9 @@ app.get("/rss", function(req, res) {
     res.send(Post.rss())
 })
 
-// FIXME ooooh sync method BaaaaaaAAAAAAaaaad!
 // GET "/license" - diplays the WTFPL
 app.get('/license', function(req, res) {
-    res.send(fs.readFileSync(path.join(__dirname, 'LICENSE')))
+    res.send(LICENSE)
 })
 
 // GET "/about"
@@ -43,4 +42,5 @@ app.get("/about", function(req, res) {
     res.render('about.ejs')
 })
 
-app.listen(process.env.PORT || 4000)
+console.log("server.js listening on http://localhost:"+PORT)
+app.listen(PORT)
