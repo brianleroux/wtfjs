@@ -11,12 +11,12 @@
   "directories": {
     "lib": "lib/"
   },
-  "dependencies":{
-    "express":"1.0.1",
-    "connect":"0.5.4",
-    "ejs":"",
-    "markdown":"",
-    "highlight":""
+  "dependencies": {
+    "connect": "0.5.4",
+    "highlight": "",
+    "express": "~3.0.0beta4",
+    "showdown": "~0.2.0",
+    "ejs-locals": "~0.1.3"
   },
   "engines": {
     "node": ">=0.4.0"
