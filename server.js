@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
 
 // GET "/page/2" - lists 5 posts for the page passed
 app.get("/page/:n", function(req, res) {
-   res.render('index.ejs', {locals:Post.page(req.params.n)})
+   res.render('index.ejs', Post.page(req.params.n))
 })
 
 // GET "/2010/05/10/title-of-article" - post permalink
@@ -23,7 +23,7 @@ app.get("/:y/:m/:d/:title", function(req, res) {
     ,   d = req.params.d
     ,   t = req.params.title
     ,   p = new Post([y,m,d,t].join('-') + '.md')
-    res.render("post.ejs", {locals:{post:p}})
+    res.render("post.ejs", {post:p})
 })
 
 // GET "/rss"
