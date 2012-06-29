@@ -1,14 +1,14 @@
-<pre>    
-    :::       ::::::::::::::::::::::::::::::::::::::::::: 
+<pre>
+    :::       :::::::::::::::::::::::::::::::::::::::::::
     :+:       :+:    :+:    :+:           :+:   :+:    :+:
-    +:+       +:+    +:+    +:+           +:+   +:+       
+    +:+       +:+    +:+    +:+           +:+   +:+
     +#+  +:+  +#+    +#+    :#::+::#      +#+   +#++:++#++
     +#+ +#+#+ +#+    +#+    +#+           +#+          +#+
      #+#+# #+#+#     #+#    #+#       #+# #+#   #+#    #+#
-      ###   ###      ###    ###        #####     ######## 
+      ###   ###      ###    ###        #####     ########
       ---------------------------------------------------
       JavaScript code blog.
-</pre>    
+</pre>
 
 
 Share your wtfjs moment
@@ -23,8 +23,12 @@ It has never been easier to contribute a wtf to wtfjs.com!
 the code
 ---
 
-- Currently supported Node: **v0.4.x**
-- The last version supported: **v0.1.96**
+- Currently supported Node: **v0.6.x**
+- The last version supported: **v0.4.x**
+- The last last version supported: **v0.1.96**
+Migrations performed by [@dtrejo][1]
 
-    
+
 http://wtfjs.com was created by [@brianleroux](http://twitter.com/brianleroux). Everything here is under the [WTFPL 2.0 license](http://wtfjs.com/license).
+
+[1]: http://github.com/DTrejo
