@@ -23,7 +23,7 @@ It has never been easier to contribute a wtf to wtfjs.com!
 the code
 ---
 
-- Currently supported Node: **v0.6.x**
+- Currently supported Node: **v0.8.x**
 - The last version supported: **v0.4.x**
 - The last last version supported: **v0.1.96**
 Migrations performed by [@dtrejo][1]
