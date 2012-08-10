@@ -1,4 +1,4 @@
-The following will return an Ingeger with a default of 0 from any String or Number.
+The following will return an Integer with a default of 0 from any String or Number.
 
 <code>
     function toInt(number) {
