@@ -1,4 +1,4 @@
-In JS you an represent numbers in haxadecimal, right?
+In JS you can represent numbers in haxadecimal, right?
 
 <code>
     var hex = 0xFF55;
@@ -9,7 +9,7 @@ Left shift is equivalent to a multiplication...
 
 ```
     var hex = 0xFF55 << 8;  // Shift 8 bits = add 0x00 at the end.
-    alert(hex.toString(16); // 0xFF5500
+    alert(hex.toString(16)); // 0xFF5500
 ```
 
 But from a certain point, this produces negative numbers
