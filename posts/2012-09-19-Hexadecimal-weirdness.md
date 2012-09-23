@@ -1,4 +1,4 @@
-In JS you can represent numbers in haxadecimal, right?
+In JS you can represent numbers in hexadecimal, right?
 
 <code>
     var hex = 0xFF55;
