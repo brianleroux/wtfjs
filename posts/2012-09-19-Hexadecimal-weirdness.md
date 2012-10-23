@@ -29,7 +29,8 @@ Thanks JS for making left shift different than a multiplication!
 
 I do have an explanation!
 
-JS stores numbers on 32 bits and uses the 32nd bit (on the left) to define the sign of the number.
+ES5 states that the left-shift operator is a signed shift on 32 bits represented by two's complement which means
+that the highest order bit defines the sign.
 
 7 in hexa = 0111 in binary (every number below 7 starts with 0)
 8 in hexa = 1000 in binary (every number above 8 starts with 1)
@@ -40,8 +41,13 @@ So in binary:
 
 (0x888888 << 8) in hexa = 1000 1000 1000 1000 1000 1000 0000 0000 in binary  (the 32nd bit becomes 1 => negative)
 
-That's logic.
+As for why multiplying 0x888888 * 0x100 yields a different result, both operands to the * operator are numeric, so
+each is casted to a IEEE 64-bit double, then multiplied, which means this is what is really happening:
 
-The non-logic thing (for me) is that ( hex * 0x100 ) ensures that the result stays positive, and ( hex << 8 ) doesn't.
+```
+    0x888888 * 0x100 === 8947848.0 * 256.0 === 2290649088.0
+```
+
+When this is converted into a string with base 16, what you get is 88888800.
 
 — [@MaximeEuziere](https://twitter.com/MaximeEuziere)
