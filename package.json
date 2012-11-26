@@ -23,7 +23,7 @@
   },
   "subdomain": "wtfjs",
   "scripts": {
-    "start": "server.js"
+    "start": "node ./server.js"
   },
   "domains": [
     "wtfjs.com",
