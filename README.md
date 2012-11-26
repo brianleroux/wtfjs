@@ -70,4 +70,5 @@ Ordered by date of first contribution.
 - [Pawel 'lord_T' Maruszczyk aka `pawel`](https://github.com/pawel)
 - [David Chambers aka `mikechambers`](https://github.com/mikechambers)
 - [Jamund Ferguson aka `xjamundx`](https://github.com/xjamundx)
+- [Thaddee Tyl aka `espadrine`](https://github.com/espadrine)
 - [Stanley Stuart aka `fivetanley`](https://github.com/fivetanley)
