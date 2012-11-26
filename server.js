@@ -28,7 +28,8 @@ app.get("/:y/:m/:d/:title", function(req, res) {
 
 // GET "/rss"
 app.get("/rss", function(req, res) {
-    res.headers['Content-Type'] = 'text/xml; charset=utf-8'
+    res.type('text/xml')
+    res.charset = 'utf-8'
     res.send(Post.rss())
 })
 
