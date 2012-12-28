@@ -72,3 +72,4 @@ Ordered by date of first contribution.
 - [Jamund Ferguson aka `xjamundx`](https://github.com/xjamundx)
 - [Thaddee Tyl aka `espadrine`](https://github.com/espadrine)
 - [Stanley Stuart aka `fivetanley`](https://github.com/fivetanley)
+- [Ben Combee aka `unwiredben`](https://github.com/unwiredben)
