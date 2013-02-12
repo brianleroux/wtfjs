@@ -24,3 +24,5 @@ console.log('done!');
 I've combined (for fun) a few WTFs to make something bigger.
 
 Just in case... don't code in JS like that. Seriously.
+
+-- [@s3a](https://github.com/s3a/)
