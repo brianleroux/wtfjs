@@ -13,4 +13,9 @@ console.log( \u1000.\u1011 ); // prints 'bar'
 
 WTF right?
 
-@manekinekko
+
+By [@manekinekko][1]
+
+[1]:https://twitter.com/manekinekko
+
+
