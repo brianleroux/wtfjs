@@ -1,11 +1,9 @@
-Obfuscated Fibonacci Sequence
-
-<code>
+```
     var fib = function (_) {
         for(_=[+[],++[[]][+[]],++[[]][+[]],((_&(((--[[]][+[]])>>>(++[[]][+[]]))))===_)?_:+[]];_[++[++[++[[]][+[]]][+[]]][+[]]]--;_[+[]]=(_[++[[]][+[]]]=_[++[++[[]][+[]]][+[]]]=_[+[]]+_[++[[]][+[]]])-_[+[]]);
         return _[++[++[[]][+[]]][+[]]];
     }
-     
+
     console.assert(fib(-1) === 1);
     console.assert(fib(0) === 1);
     console.assert(fib(1) === 1);
@@ -20,6 +18,8 @@ Obfuscated Fibonacci Sequence
     console.assert(fib(62) === 6557470319842);
      
     console.log('done!');
-</code>
+```
 
-Just combined a few WTFs.
+I've combined (for fun) a few WTFs to make something bigger.
+
+Just in case... don't code in JS like that. Seriously.
