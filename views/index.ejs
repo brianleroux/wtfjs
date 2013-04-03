@@ -5,7 +5,7 @@
        <h1><%- posts[i].anchor() %></h1>
        <div class="date">
            <%- 'jan feb mar apr may june july aug sept oct nov dec'.split(' ')[posts[i].created().getMonth()] %>
-           <%- posts[i].created().getDay() %>
+           <%- posts[i].created().getDate() %>
            , <%- posts[i].created().getFullYear() %>
        </div>
        <div class="body"><%- posts[i].html() %></div>
