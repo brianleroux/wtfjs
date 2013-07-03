@@ -15,7 +15,7 @@ But not all the time.
 
 ```
     var myFunction = function myFunction() { };
-    f.name; // is 'myFunction'
+    myFunction.name; // is 'myFunction'
 ```
 
 Functions happen to have magic properties. One of them is the non-standard `.name`,
