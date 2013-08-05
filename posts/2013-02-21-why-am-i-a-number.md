@@ -23,7 +23,7 @@ Note that we can cast strings to numbers by preceding them with +:
 
 ```
 
-- [@wojciechfornal][2]
+— [@wojciechfornal][2]
 
 [1]:https://twitter.com/jhnnns
 [2]:https://twitter.com/wojciechfornal
