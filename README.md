@@ -73,3 +73,4 @@ Ordered by date of first contribution.
 - [Thaddee Tyl aka `espadrine`](https://github.com/espadrine)
 - [Stanley Stuart aka `fivetanley`](https://github.com/fivetanley)
 - [Ben Combee aka `unwiredben`](https://github.com/unwiredben)
+- [Gonçalo Morais aka `gnclmorais`](https://github.com/gnclmorais)
