@@ -92,3 +92,4 @@ Ordered by date of first contribution.
 - [Stanley Stuart aka `fivetanley`](https://github.com/fivetanley)
 - [Ben Combee aka `unwiredben`](https://github.com/unwiredben)
 - [Gonçalo Morais aka `gnclmorais`](https://github.com/gnclmorais)
+- [Maxime Euzière aka `xem`](https://github.com/xem)
