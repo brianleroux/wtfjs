@@ -19,7 +19,7 @@ x = /[/ + "javascript"[0] + '///'
 ###The Hungry Variable
 Those who don't immediately see through this may notice a few things.
 
-* Like `/(`, `/[/` throws an error.
+* Like `/(/`, `/[/` throws an error.
 * `"javascript"[0]` returns `"j"` as expected.
 * `'///'` returns `"///"` as expected.
 
@@ -55,4 +55,4 @@ x = /[/ + "javascript"[0] + '///'
 
 It is an interesting example of a statement that can completely change meaning with the insertion of one character without creating any errors.
 
-[@zemnmez][1]
+ - [@zemnmez][1]
