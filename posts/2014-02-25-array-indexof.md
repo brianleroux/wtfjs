@@ -27,12 +27,13 @@ In that, `k` is a number corresponding to an array index and O is the array itse
 Since elided elements were not defined the array does not have a property for the corresponding index.
 
 *Ok. But why we get `undefined` when get first array element?*
+
 Javascript is prototype-based scripting language and Array is a object too.
 So if there is no property `0` in a array, the internal engine go deeper to prototype 
 and there is no such property in prototype chain - return undefined.
 When we trying to access to value `0` property of array the internal method `[[GetProperty]]` calls.
-When there is no such property [[GetProperty]] try to get it from prototype chain 
-and returns undefined if it stops on null(end of prototype chains).
+When there is no such property `[[GetProperty]]` try to get it from prototype chain 
+and returns `undefined` if it stops on `null`(end of prototype chains).
 
 
 — [frontenddeveloping](https://github.com/frontenddeveloping)
