@@ -27,3 +27,24 @@ Note that we can cast strings to numbers by preceding them with +:
 
 [1]:https://twitter.com/jhnnns
 [2]:https://twitter.com/wojciechfornal
+
+***
+
+```
+typeof +""; // number
+
+// even
+typeof -""; // "number"
+
+// BUT!!!
+-"foo"; //NaN
+typeof -"foo"; // "number"
+
+// because
+typeof NaN === 'number'; // Despite being "Not-A-Number"
+
+```
+
+— [kirillov-artur][1]
+
+[1]:https://github.com/kirillov-artur
