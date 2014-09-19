@@ -28,6 +28,6 @@ You can add `undefined` to the end explicitly to get 4 elements array:
 — [@ixti][3]
 
 
-[1]:https://twitter.com/eliranmal]
+[1]:https://twitter.com/eliranmal
 [2]:https://twitter.com/ddtrejo
 [3]:http://ixti.net
