@@ -11,4 +11,4 @@ Both should obviously fail, but return **true**. srsly, WTF JS?
 
 — [@damienklinnert][1]
 
-[1]:https://twitter.com/damienklinnert]
+[1]:https://twitter.com/damienklinnert
