@@ -28,6 +28,12 @@ You can add `undefined` to the end explicitly to get 4 elements array:
 — [@ixti][3]
 
 
+Each beginning or ending comma is Elision (except comma after AssignmentExpression). Each Elision are evaluated as one array field.
+http://www.ecma-international.org/ecma-262/5.1/#sec-11.1.4
+
+— [@tomi77]
+
+
 [1]:https://twitter.com/eliranmal]
 [2]:https://twitter.com/ddtrejo
 [3]:http://ixti.net
