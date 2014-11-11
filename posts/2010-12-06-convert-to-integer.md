@@ -1,30 +1,30 @@
 The following will return an Integer with a default of 0 from any String or Number.
 
-<code>
-    function toInt(number) {
-      return number && + number | 0 || 0;
-    }
-    console.log(toInt("1"));  // 1
-    console.log(toInt("1.2"));  // 1
-    console.log(toInt("-1.2"));  // -1
-    console.log(toInt(1.2));  // 1
-    console.log(toInt(0));  // 0
-    console.log(toInt("0"));  // 0
-    console.log(toInt(Number.NaN));  // 0
-    console.log(toInt(1/0));  // 0
-</code>
+```
+function toInt(number) {
+  return number && + number | 0 || 0;
+}
+console.log(toInt("1"));  // 1
+console.log(toInt("1.2"));  // 1
+console.log(toInt("-1.2"));  // -1
+console.log(toInt(1.2));  // 1
+console.log(toInt(0));  // 0
+console.log(toInt("0"));  // 0
+console.log(toInt(Number.NaN));  // 0
+console.log(toInt(1/0));  // 0
+```
 
 Explanation
 --
 
-<code>
-    number && x
-</code>
+```
+number && x
+```
 will return <code>x</code> if <code>number</code> is truthy, and <code>number</code> otherwise.
 
-<code>
-    x || 0
-</code>
+```
+x || 0
+```
 will return <code>x</code> if <code>x</code> is truthy, and 0 otherwise.
 
 <code>+ number</code> will convert number to a Number.

@@ -1,8 +1,8 @@
 In JS you can represent numbers in hexadecimal, right?
 
-<code>
-    var hex = 0xFF55;
-</code>
+```
+var hex = 0xFF55;
+```
 
 You can also perform shift operations, right?
 Left shift is equivalent to a multiplication...

@@ -1,15 +1,14 @@
 See if you can guess what this will output:
 
-<code>
-    function allNames() {
-      var names = [ 'dan', 'anthony', 'pavel' ];
-      for (name in names) {
-        console.log(name);
-      }
-    }
-
-    allNames();
-</code>
+```
+function allNames() {
+  var names = [ 'dan', 'anthony', 'pavel' ];
+  for (name in names) {
+    console.log(name);
+  }
+}
+allNames();
+```
 
 If you guessed this:
 
@@ -22,9 +21,9 @@ If you guessed this:
 
 What you might not have guessed, is what this will output:
 
-<code>
-    console.log(window.name);
-</code>
+```
+console.log(window.name);
+```
 
 it's:
 
@@ -35,14 +34,14 @@ Iteration is assignment, and without the use of the `var` keyword, you're really
 
 So the original function is equivalent to:
 
-<code>
-    function allNames() {
-      var names = [ 'dan', 'anthony', 'pavel' ];
-      for (window.name in names) {
-        console.log(name);
-      }
-    }
-</code>
+```
+function allNames() {
+  var names = [ 'dan', 'anthony', 'pavel' ];
+  for (window.name in names) {
+    console.log(name);
+  }
+}
+```
 
 By [@danlash][1]
 

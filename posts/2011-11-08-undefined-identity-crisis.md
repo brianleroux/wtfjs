@@ -1,14 +1,14 @@
 Everyone loves Yoda Conditionals, right? They stop you from accidentally assigning stuff when you should be comparing, breaking everything! Or do they?
 
-<code>
-    function test (a) {
-      if (undefined = a) {
-        a = {}
-      }
-      return a;
-    }
-    undefined === test(null)
-</code>
+```
+function test (a) {
+  if (undefined = a) {
+    a = {}
+  }
+  return a;
+}
+undefined === test(null)
+```
 
 I encountered this gem recently. It's more a bug in the code than the implementation, but it's the implementation that allows this quirky disaster to occur. A single missing equals symbol in the comparison of undefined against a is the source of the chaos.
 

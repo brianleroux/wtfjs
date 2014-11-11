@@ -1,12 +1,12 @@
 `isFinite` function of JavaScript tests whether a number is finite.
 
-<code>
-    isFinite(42); // true
-    isFinite(1/0); // false
-    isFinite(0/0); // NaN is not finite -> false
-    isFinite('42'); // true
-    isFinite('hi'); // false
-</code>
+```
+isFinite(42); // true
+isFinite(1/0); // false
+isFinite(0/0); // NaN is not finite -> false
+isFinite('42'); // true
+isFinite('hi'); // false
+```
 
 These are normal results.
 

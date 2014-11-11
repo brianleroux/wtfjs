@@ -1,8 +1,8 @@
 Be aware of parseInt!
 
-<code>
-    parseInt(null, 24) === 23 // true
-</code>
+```
+parseInt(null, 24) === 23 // true
+```
 
 [Answer and source!](http://stackoverflow.com/q/6459758/269804)
 
