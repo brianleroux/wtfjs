@@ -19,4 +19,4 @@ that local storage only accepts string values!
 If you want to store an object or other type of value, you can serialize the
 data with `JSON.stringify` and load it again with `JSON.parse`.
 
-— [@Overv](http://while.io)
+— [@Overv](http://twitter.com/Overv) of <http://while.io>
