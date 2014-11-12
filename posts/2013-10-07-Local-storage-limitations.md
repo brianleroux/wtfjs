@@ -2,11 +2,11 @@ The **local storage** functionality in browsers is a bit limited and this can
 lead to some rather surprising behaviour.
 
 ```
-  localStorage[0] = false;
+localStorage[0] = false;
 
-  if (localStorage[0]) {
-      console.log('wtf'); // runs?!
-  }
+if (localStorage[0]) {
+    console.log('wtf'); // runs?!
+}
 ```
 
 When checking the value stored in `localStorage`, it appears that the boolean

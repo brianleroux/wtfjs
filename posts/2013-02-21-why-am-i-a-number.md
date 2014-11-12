@@ -1,7 +1,7 @@
 Can someone tell me?
 
 ```
-    "Why am I a " + typeof + ""; // "Why am I a number"
+"Why am I a " + typeof + ""; // "Why am I a number"
 ```
 
 — [@jhnnns][1]
@@ -16,7 +16,6 @@ can be used as an unary operator (syntax is: + UnaryExpression). + converts its 
 Note that we can cast strings to numbers by preceding them with +:
 
 ```
-
 (2 + "3");  // 23
 (2 + +"3"); // 5
 (+"");      // 0

@@ -8,21 +8,21 @@ You can also perform shift operations, right?
 Left shift is equivalent to a multiplication...
 
 ```
-    var hex = 0xFF55 << 8;  // Shift 8 bits = add 0x00 at the end.
-    alert(hex.toString(16)); // 0xFF5500
+var hex = 0xFF55 << 8;  // Shift 8 bits = add 0x00 at the end.
+alert(hex.toString(16)); // 0xFF5500
 ```
 
 But from a certain point, this produces negative numbers
 
 ```
-    // Before 0x800000 it's ok
-    alert((0x777777 << 8).toString(16)); // 0x77777700
+// Before 0x800000 it's ok
+alert((0x777777 << 8).toString(16)); // 0x77777700
 
-    // After 0x800000 it's not ok
-    alert((0x888888 << 8).toString(16)); // -77777800, WTF?
+// After 0x800000 it's not ok
+alert((0x888888 << 8).toString(16)); // -77777800, WTF?
 
-    // The only way to remain positive is to multiply instead of shifting
-    alert((0x888888 * 0x100).toString(16)); // 88888800
+// The only way to remain positive is to multiply instead of shifting
+alert((0x888888 * 0x100).toString(16)); // 88888800
 ```
 
 Thanks JS for making left shift different than a multiplication!
@@ -45,7 +45,7 @@ As for why multiplying 0x888888 * 0x100 yields a different result, both operands
 each is casted to a IEEE 64-bit double, then multiplied, which means this is what is really happening:
 
 ```
-    0x888888 * 0x100 === 8947848.0 * 256.0 === 2290649088.0
+0x888888 * 0x100 === 8947848.0 * 256.0 === 2290649088.0
 ```
 
 When this is converted into a string with base 16, what you get is 88888800.

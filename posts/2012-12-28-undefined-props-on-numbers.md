@@ -1,8 +1,8 @@
 ```
-    function getBounds(node) {
-        var n = node || 0;
-        return { width: n.width, height: n.height };
-    }
+function getBounds(node) {
+  var n = node || 0;
+  return { width: n.width, height: n.height };
+}
 ```
 
 If you call `getBounds()` with _null_, you'll get back `{ width: undefined, height: undefined }`

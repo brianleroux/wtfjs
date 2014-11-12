@@ -11,14 +11,14 @@ isFinite('hi'); // false
 These are normal results.
 
 ```
-    isFinite(); // false
-    isFinite(undefined); // false
+isFinite(); // false
+isFinite(undefined); // false
 ```
 
 Undefined values are not finite. These are normal results too.
 
 ```
-    isFinite(null); // true
+isFinite(null); // true
 ```
 
 Wait, what? Is null a number? [It is converted into 0](http://ecma-international.org/ecma-262/5.1/#sec-9.3)? Why?

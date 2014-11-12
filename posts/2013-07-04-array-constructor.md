@@ -1,5 +1,5 @@
 ```
-    Array(20).map(function(elem) { return 'a'; }); // Array of undefined x 20
+Array(20).map(function(elem) { return 'a'; }); // Array of undefined x 20
 ```
 
 More info [here](http://www.ecma-international.org/ecma-262/5.1/#sec-15.4.4.19).

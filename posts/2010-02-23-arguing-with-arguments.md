@@ -1,4 +1,5 @@
-Nice arguments hackery going on here. 
+Nice arguments hackery going on here:
+
 
 ```
 (function(a,b,c) {
@@ -12,16 +13,19 @@ Nice arguments hackery going on here.
     changeArguments(arguments);
     print(a,b,c); // I messed up your dataz
 })("one", "two", "three");
+
 // not cool.
+
 function changeArguments(args){
     args[0] = "I messed"
     args[1] = "up your";
     args[2] = "dataz";
 }
 ```
-    
+
+A more real world example:
+
 ```
-// A more real world example:
 (function(arg1, arg2) {
     print(arg1, arg2);
     //-> uno dose

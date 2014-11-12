@@ -1,6 +1,6 @@
 ```
-    parseInt('fuck');     // NaN
-    parseInt('fuck', 16); // 15
+parseInt('fuck');     // NaN
+parseInt('fuck', 16); // 15
 ```
 
 So remember kids, always supply a radix!

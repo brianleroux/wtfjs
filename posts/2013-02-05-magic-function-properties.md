@@ -1,21 +1,21 @@
 ```
-    var f = function() { };
-    f.foo = 'foo'; // sets f.foo to 'foo'
+var f = function() { };
+f.foo = 'foo'; // sets f.foo to 'foo'
 ```
 
 Functions are objects, so you can set properties on them after creation.
 
 ```
-    f.name; // is ''
-    f.name = 'foo';
-    f.name; // is still ''
+f.name; // is ''
+f.name = 'foo';
+f.name; // is still ''
 ```
 
 But not all the time.
 
 ```
-    var f = function myFunction() { };
-    f.name; // is 'myFunction'
+var f = function myFunction() { };
+f.name; // is 'myFunction'
 ```
 
 Functions happen to have magic properties. One of them is the non-standard `.name`,

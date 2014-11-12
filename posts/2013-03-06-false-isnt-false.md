@@ -1,6 +1,6 @@
 ```
-    true == 'true'     // true
-    false == 'false';  // false
+true == 'true'     // true
+false == 'false';  // false
 ```
 
 This is expected behaviour as == doesn't do value equality,
