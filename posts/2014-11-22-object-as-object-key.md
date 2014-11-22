@@ -1,7 +1,7 @@
 What happens when we set empty objects as keys:
 
 <code>
-(function() {
+var result = (function() {
     var foo = new Object();
     var bar = new Object();
     var map = new Object();
@@ -9,8 +9,10 @@ What happens when we set empty objects as keys:
     map[foo] = 'foo';
     map[bar] = 'bar';
 
-    return map[foo]; // "bar"
+    return map[foo];
 })();
+
+console.log(result); // "bar"
 </code>
 
 Explained:
