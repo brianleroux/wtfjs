@@ -17,3 +17,5 @@ When the type equality comparison is evaluated, the state of undefined is stored
 By [@stephenbelanger][1]
 
 [1]:https://twitter.com/stephenbelanger
+
+**EDIT**: This has been fixed in ECMAScript 5. `undefined` is now a constant instead of a global variable. The above sample code will now always return false. –[@TimoTijhof](https://twitter.com/TimoTijhof)

@@ -14,7 +14,7 @@ Functions are objects, so you can set properties on them after creation.
 But not all the time.
 
 ```
-    var myFunction = function myFunction() { };
+    var f = function myFunction() { };
     f.name; // is 'myFunction'
 ```
 

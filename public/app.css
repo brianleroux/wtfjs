@@ -259,3 +259,14 @@ pre .tex .formula {
 }
 
 
+h2.about {
+    font-weight: 200;
+    font-size: 1rem;
+    color: #ccc;
+    text-align: right;
+    font-style: italic;
+}
+
+h2.about a {
+    color: #bbb;
+}

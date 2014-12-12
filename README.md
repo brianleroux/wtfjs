@@ -22,6 +22,24 @@ It has never been easier to contribute a wtf to wtfjs.com!
 - send a pull request
 - WTF
 
+### Example post format
+<pre>
+
+```
+    Array(20).map(function(elem) { return 'a'; }); // Array of undefined x 20
+```
+
+More info [here](http://www.ecma-international.org/ecma-262/5.1/#sec-15.4.4.19).
+Thanks [Paul Irish](https://twitter.com/paul_irish) for the explanation.
+
+— [@yourtwitterhandle_or_githubhandle][1]
+
+[1]:https://githubortwitter.com/yourusername
+</pre>
+
+Note that your code won't be highlighted :( If you'd like to figure out how to
+get '```' to highlight, please help and submit PR! Thank you! - @DTrejo
+
 the code
 ---
 
@@ -74,3 +92,4 @@ Ordered by date of first contribution.
 - [Stanley Stuart aka `fivetanley`](https://github.com/fivetanley)
 - [Ben Combee aka `unwiredben`](https://github.com/unwiredben)
 - [Gonçalo Morais aka `gnclmorais`](https://github.com/gnclmorais)
+- [Maxime Euzière aka `xem`](https://github.com/xem)
