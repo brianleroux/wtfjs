@@ -26,14 +26,14 @@ when you pass `len` argument:
 > constructed object is set to ToUint32(len).
 
 In other words, `Array(1)` and `[undefined]` has nothing in common. First one
-simply creates empy array with presetted `length` property. Second creates an
-array with values, and sets length to the amount of elements.
+simply creates an empty array with presetted `length` property. Second creates
+an array with values, and sets length to the amount of elements.
 
 ``` javascript
 Array(3).length // => 3
 ```
 
-Specification of [forEach][1] declares it's workflow explicitly (pseudo-code):
+Specification of [forEach][1] declares its workflow explicitly (pseudo-code):
 
 ```
 let O         = ToObject(this)
