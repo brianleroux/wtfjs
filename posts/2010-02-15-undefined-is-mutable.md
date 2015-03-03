@@ -15,3 +15,14 @@ Due to the mutability of undefined, it is generally a better idea to check for u
 </code>
 
 – [@mathias](http://mathiasbynens.be/)
+
+That is no longer the case in [ECMAScript 5](http://ecma-international.org/ecma-262/5.1/#sec-15.1.1.3)
+
+In ECMAScript 3, a [trick you can use](http://www.2ality.com/2011/05/void-operator.html) is comparing to `void 0` because the **void** expression always evaluates to **undefined**:
+
+<code>
+ var a = {};
+ a.b === void 0; // true
+</code>
+
+– [@tknomad](http://webninja.io)
