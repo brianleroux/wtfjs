@@ -1,4 +1,6 @@
-When I use regular expressions and I want to validate a range of letters, I can do it using `a-z` or `A-Z`. Even when I use `A-z` it works fine too. The problem comes doing some test:
+When I use regular expressions and I want to validate a range of letters, I can
+do it using `a-z` or `A-Z`. Even when I use `A-z` it works fine too. The problem
+comes doing some test:
 
 ```
   /[A-Z]/.test("A"); // true
@@ -26,44 +28,55 @@ The weird thing comes when I do this test:
 It's supposed to accept only letters from `A to Z` and `a to z`.
 Can someone explain this?
 
-— [@byoigres][1]
+&mdash; [@byoigres][1]
 
 
 I had a look into this with the following code:
 ```javascript
-var re = /[A-z]/g,s=(function(){
-  var f = String.fromCharCode;
-  for(var i=0;i<6000;i++) f=f.bind(0, i);
-  return f();
-})(),q,z=[];while((q=re.exec(s)) != null) z.push(q[0]);z
+  var re = /[A-z]/g,s=(function(){
+    var f = String.fromCharCode;
+    for(var i=0;i<6000;i++) f=f.bind(0, i);
+    return f();
+  })(),q,z=[];while((q=re.exec(s)) != null) z.push(q[0]);z
 ```
 
 It returns
 
 ```javascript
-["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "\", "]", "^", "_", "`", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O",
+  "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "\", "]", "^",
+  "_", "`", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+  "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 ```
 
-It is likely, I think that A-z literally means 'any character between 'A' and 'z' in unicode code-point order, or at least charCode order. This allows (I think non-standard) statements like `/[ -y]/g`:
+It is likely, I think that A-z literally means 'any character between 'A' and
+'z' in unicode code-point order, or at least charCode order. This allows (I
+think non-standard) statements like `/[ -y]/g`:
 
 ```javascript
-var re = /[ -y]/g,s=(function(){
-  var f = String.fromCharCode;
-  for(var i=0;i<6000;i++) f=f.bind(0, i);
-  return f();
-})(),q,z=[];while((q=re.exec(s)) != null) z.push(q[0]);z
+  var re = /[ -y]/g,s=(function(){
+    var f = String.fromCharCode;
+    for(var i=0;i<6000;i++) f=f.bind(0, i);
+    return f();
+  })(),q,z=[];while((q=re.exec(s)) != null) z.push(q[0]);z
 ```
 
 Which returns
 ```javascript
-[" ", "!", """, "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", ";", "<", "=", ">", "?", "@", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "\", "]", "^", "_", "`", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y"]`
+  [" ", "!", """, "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".",
+  "/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", ";", "<", "=",
+  ">", "?", "@", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
+  "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[",
+  "\", "]", "^", "_", "`", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+  "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y"]`
 ```
 
-This probably has some potential security implications because if you're using [A-z] to sanitise something, you'll accept <code>[\]^_`<code>
+This probably has some potential security implications because if you're using
+[A-z] to sanitise something, you'll accept <code>[\]^_`<code>
 
- A very interesting find!
+A very interesting find!
 
-— [zemnmez][2]
+&mdash; [zemnmez][2]
 
 [1]:https://twitter.com/byoigres
 [2]:https://twitter.com/zemnmez
