@@ -8,7 +8,7 @@ Now try this...
     !null // true
 ```
 
-This is because the *logical NOT operator* (`!`) converts any would-be-`false` value to true, and vice-versa. Furthermore, `null` and `false` are two very different values.
+This is because the [*logical NOT operator* (`!`)](http://www.ecma-international.org/ecma-262/5.1/#sec-11.4.9) converts any would-be-`false` value to true, and vice-versa. Furthermore, `null` and `false` are two very different values.
 
 — [@noway421][1]
 
