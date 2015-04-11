@@ -15,21 +15,6 @@ h1 a {
     color:#333;
 }
 
-pre, code {
-    font-family: monaco, monospace;
-    overflow-x: auto;
-    width: 100%;
-}
-
-pre {
-    border:1px solid #5d6778;
-    border-radius:5px;
-    -moz-border-radius: 5px;
-    padding:10px 10px 20px 0;
-    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(#0F2925));
-    background:-moz-linear-gradient(top, #000, #0F2925);
-}
-
 hr {
     border:none;
     background-color: #eaeaea;
@@ -152,111 +137,6 @@ hr {
 .date {
   color: #666666;
 }
-/*
-  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
-*/
-
-pre code {
-  color: #f8f8f8;
-}
-
-pre {
-  background: #000;
-}
-
-pre .shebang,
-pre .comment,
-pre .template_comment,
-pre .javadoc {
-  color: #7c7c7c;
-}
-
-pre .keyword,
-pre .tag,
-pre .ruby .function .keyword,
-pre .tex .command {
-  color: #96CBFE;
-}
-
-pre .function .keyword,
-pre .sub .keyword,
-pre .method,
-pre .list .title {
-  color: #FFFFB6;
-}
-
-pre .string,
-pre .attribute .value,
-pre .cdata,
-pre .filter .argument,
-pre .attr_selector,
-pre .apache .cbracket,
-pre .date {
-  color: #A8FF60;
-}
-
-pre .subst {
-  color: #DAEFA3;
-}
-
-pre .regexp {
-  color: #E9C062;
-}
-
-pre .function .title,
-pre .sub .identifier,
-pre .pi,
-pre .decorator,
-pre .ini .title,
-pre .tex .special {
-  color: #FFFFB6;
-}
-
-pre .class .title,
-pre .constant,
-pre .smalltalk .class,
-pre .javadoctag,
-pre .yardoctag,
-pre .phpdoc,
-pre .nginx .built_in {
-  color: #FFFFB6;
-}
-
-pre .symbol,
-pre .ruby .symbol .string,
-pre .ruby .symbol .keyword,
-pre .ruby .symbol .keymethods,
-pre .number,
-pre .variable,
-pre .vbscript,
-pre .literal {
-  color: #C6C5FE;
-}
-
-pre .css .keyword {
-  color: #96CBFE;
-}
-
-pre .css .rule .keyword,
-pre .css .id {
-  color: #FFFFB6;
-}
-
-pre .css .class {
-  color: #FFF;
-}
-
-pre .hexcolor {
-  color: #C6C5FE;
-}
-
-pre .number {
-  color:#FF73FD;
-}
-
-pre .tex .formula {
-  opacity: 0.7;
-}
 
 
 h2.about {
@@ -269,4 +149,124 @@ h2.about {
 
 h2.about a {
     color: #bbb;
+}
+
+
+code, kbd, pre, samp {
+  font-family: monaco, monospace;
+}
+
+/*
+  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
+*/
+
+pre, .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #f8f8f8;
+  -webkit-text-size-adjust: none;
+
+  border:1px solid #5d6778;
+  border-radius:5px;
+  -moz-border-radius: 5px;
+  background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(#0F2925));
+  background:-moz-linear-gradient(top, #000, #0F2925);
+}
+
+.hljs-shebang,
+.hljs-comment,
+.hljs-javadoc {
+  color: #7c7c7c;
+}
+
+.hljs-keyword,
+.hljs-tag,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status,
+.clojure .hljs-attribute {
+  color: #96cbfe;
+}
+
+.hljs-sub .hljs-keyword,
+.method,
+.hljs-list .hljs-title,
+.nginx .hljs-title {
+  color: #ffffb6;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-cdata,
+.hljs-filter .hljs-argument,
+.hljs-attr_selector,
+.apache .hljs-cbracket,
+.hljs-date,
+.coffeescript .hljs-attribute {
+  color: #a8ff60;
+}
+
+.hljs-subst {
+  color: #daefa3;
+}
+
+.hljs-regexp {
+  color: #e9c062;
+}
+
+.hljs-title,
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.hljs-decorator,
+.tex .hljs-special,
+.hljs-type,
+.hljs-constant,
+.smalltalk .hljs-class,
+.hljs-javadoctag,
+.hljs-yardoctag,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.nginx .hljs-built_in {
+  color: #ffffb6;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-number,
+.hljs-variable,
+.vbscript,
+.hljs-literal {
+  color: #c6c5fe;
+}
+
+.css .hljs-tag {
+  color: #96cbfe;
+}
+
+.css .hljs-rules .hljs-property,
+.css .hljs-id {
+  color: #ffffb6;
+}
+
+.css .hljs-class {
+  color: #fff;
+}
+
+.hljs-hexcolor {
+  color: #c6c5fe;
+}
+
+.hljs-number {
+  color:#ff73fd;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.7;
 }

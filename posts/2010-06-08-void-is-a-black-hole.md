@@ -1,8 +1,8 @@
 Void is a blackhole...
 
-<code>
-    var void = function () {}
-    //=> SyntaxError: missing variable name
-</code>
+```
+var void = function () {}
+//=> SyntaxError: missing variable name
+```
 
 -- [@rwaldron](http://twitter.com/rwaldron)

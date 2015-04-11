@@ -1,6 +1,6 @@
-<code>
-    typeof null // object
-    null instanceof Object // false
-</code>
+```
+typeof null // object
+null instanceof Object // false
+```
 
 Classic null is not an Object.

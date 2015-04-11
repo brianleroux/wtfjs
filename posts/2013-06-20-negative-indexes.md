@@ -1,10 +1,10 @@
 Negative numbers mean different things to different functions on the Array prototype.
 
-<code>
-    var nums = [1, 2, 3];
-    nums.splice(nums.indexOf('wtf'), 1);
-    nums; // [1, 2]
-</code>
+```
+var nums = [1, 2, 3];
+nums.splice(nums.indexOf('wtf'), 1);
+nums; // [1, 2]
+```
 
 — [@markdalgleish][1]
 

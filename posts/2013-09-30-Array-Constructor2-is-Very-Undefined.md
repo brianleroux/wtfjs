@@ -2,13 +2,17 @@ Have you ever thought that `Array(3)` will return you an array of 3 `undefined`'
 the same as `[undefined,undefined,undefined]`?
 
 So try this:
+
 ```
-    Array(3).forEach(function(elem) { console.log(elem); });
+Array(3).forEach(function(elem) { console.log(elem); });
 ```
+
 And you will get no result at all, however
+
 ```
-    [undefined,undefined,undefined].forEach(function(elem) { console.log(elem); });
+[undefined,undefined,undefined].forEach(function(elem) { console.log(elem); });
 ```
+
 will give you 3 nice log entries.
 
 Are the first example's `undefined` less defined than the second example's `undefined`s?

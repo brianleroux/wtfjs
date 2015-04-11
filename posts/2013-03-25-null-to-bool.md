@@ -1,11 +1,13 @@
 ```
-    null == false // false
+null == false // false
 ```
+
 Okay, we know this. Null doesn't convert to boolean.
 
 Now try this...
+
 ```
-    !null // true
+!null // true
 ```
 
 Well, this is awkward.

@@ -1,19 +1,19 @@
 You've probably seen this one here before. NaN (**N**ot **a** **N**umber) suffers from a terrible case of self-deception.
 
-<code>
-    typeof NaN
-    //=> number
-</code>
+```
+typeof NaN
+//=> number
+```
 
 
 --- [@3rdEden](http://twitter.com/3rdEden)
 
 Its still hilarious. Now, check this out:
 
-<code>
-    3..toString();
-    // "3"
-</code>
+```
+3..toString();
+// "3"
+```
 
 [Explanation here.](http://stackoverflow.com/questions/1995113/strangest-language-feature/3297392#3297392)
 

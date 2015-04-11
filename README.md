@@ -25,8 +25,8 @@ It has never been easier to contribute a wtf to wtfjs.com!
 ### Example post format
 <pre>
 
-```
-    Array(20).map(function(elem) { return 'a'; }); // Array of undefined x 20
+``` javascript
+Array(20).map(function(elem) { return 'a'; }); // Array of undefined x 20
 ```
 
 More info [here](http://www.ecma-international.org/ecma-262/5.1/#sec-15.4.4.19).
@@ -36,9 +36,6 @@ Thanks [Paul Irish](https://twitter.com/paul_irish) for the explanation.
 
 [1]:https://githubortwitter.com/yourusername
 </pre>
-
-Note that your code won't be highlighted :( If you'd like to figure out how to
-get '```' to highlight, please help and submit PR! Thank you! - @DTrejo
 
 the code
 ---
