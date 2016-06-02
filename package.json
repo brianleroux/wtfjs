@@ -28,5 +28,6 @@
   "domains": [
     "wtfjs.com",
     "www.wtfjs.com"
-  ]
+  ],
+  "license": "WTFPL"
 }

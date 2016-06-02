@@ -4,7 +4,6 @@ var post = require('./lib/post')
 ,   path = require('path')
 ,   app  = require('./lib/config').app
 ,   PORT = process.env.PORT || 4000
-,   LICENSE = fs.readFileSync(path.join(__dirname, 'LICENSE'))
 
 // GET "/" - lists first 5 get("/", Post.paginate);
 app.get('/', function(req, res) {
@@ -35,7 +34,7 @@ app.get("/rss", function(req, res) {
 
 // GET "/license" - diplays the WTFPL
 app.get('/license', function(req, res) {
-    res.send(LICENSE)
+    res.render('license.ejs')
 })
 
 // GET "/about"
