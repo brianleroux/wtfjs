@@ -1,0 +1,20 @@
+Have you ever thought that `Array(3)` will return you array of 3 `undefined`'s same as `[undefined,undefined,undefined]`?
+
+So try this:
+```
+    Array(3).forEach(function(elem) { console.log(elem); });
+```
+And you will get no result at all, however
+```
+    [undefined,undefined,undefined].forEach(function(elem) { console.log(elem); });
+```
+will give you 3 nice log entries.
+
+Are first `undefined`'s less defined than second ones?
+
+Not really. According to [forEach spec](http://www.ecma-international.org/ecma-262/5.1/#sec-15.4.4.18): "`callbackfn` is called only for elements of the array which actually *exist*", and [constructor spec](http://www.ecma-international.org/ecma-262/5.1/#sec-15.4.2.2) says nothing about putting there any (even undefined) element.
+
+
+— [@tomalec][1]
+
+[1]:https://github.com/tomalec
