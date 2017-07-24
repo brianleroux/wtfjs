@@ -50,7 +50,7 @@ The regex then extends to the slash after the typewriter single quote, and so
 the `//'` is simply a comment.
 
 
-If you want the pre to do as expected, add a single forward slash before the
+If you want the pre to do as expected, add a single backslash before the
 first "[":
 
 ```
