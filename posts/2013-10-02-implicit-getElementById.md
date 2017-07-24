@@ -1,4 +1,4 @@
-document.getElementById can be omitted in all major browsers, inclunding IE6+.
+document.getElementById can be omitted in all major browsers, including IE6+.
 This is non-standard, but all of them save the elements ids as globals.
 
 ```
