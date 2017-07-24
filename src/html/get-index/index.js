@@ -1,3 +1,12 @@
+var arc = require('@architect/functions')
+
+function route(req, res) {
+  res({
+    html:`hello world`
+  })
+}
+
+/*
 <% layout('layout') -%>
 
 <% for (var i = 0; i < posts.length; i++) { %>
@@ -21,3 +30,5 @@
     <a id="next" href="/page/<%- nextPage %>">&rarr;</a>
     <% } %>
 </div>
+*/
+exports.handler = arc.html.get(route)

@@ -1,9 +1,15 @@
+var fs = require('fs')
+var path = require('path')
+var css = false
+
+module.exports = function layout(body) {
+  if (!css) css = fs.readFileSync(path.join(__dirname, 'index.css')).toString()
+  return `
 <!DOCTYPE html> <!-- OOoooooh HTML5! -->
 <html>
     <head>
         <title>wtfjs - a little code blog about that language we love despite giving us so much to hate</title>
-        <link rel="stylesheet" href="/app.css" type="text/css" charset="utf-8" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed for http://wtfjs.com" href="/rss/" />
+        <style type=text/css>${css}</style>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <!--
@@ -23,13 +29,13 @@
 
             <h2 class="about">
                 created by
-                <a href="http://brian.io/">Brian Leroux</a> &amp;
+                <a href="http://brian.io/">Brian LeRoux</a> &amp;
                 <a href="https://twitter.com/alunny">Andrew Lunny</a>.
                 sparodically uncurated by
                 <a href="http://dtrejo.com">David Trejo</a>.
             </h2>
 
-            <div id="content"><%- body %></div>
+            <div id="content">${body}</div>
             <div id="foot">wtfjs is <a href="/license">free software</a>. get the <a href="http://github.com/brianleroux/wtfjs">source on github</a>. </div>
         </div>
         <a href="http://github.com/brianleroux/wtfjs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" /></a>
@@ -49,3 +55,5 @@
     </body>
 </html>
 <!-- 3 > 2 >= 1 -->
+`
+}

@@ -1,0 +1,8 @@
+{
+  "name": "wtfjs-get-wtfs-000wtfID",
+  "dependencies": {
+    "@architect/functions": "^1.3.0",
+    "@wtfjs/md": "^2.0.0",
+    "@wtfjs/theme": "^1.0.0"
+  }
+}
