@@ -7,4 +7,4 @@ Maybe you want to deploy a code blog quickly. Maybe you want an excuse to play w
     $ git push heroku master
 </code>
 
-Your done!
+You're done!
