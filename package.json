@@ -15,6 +15,7 @@
   "scripts": {
     "start": "NODE_ENV=testing arc-sandbox",
     "create": "AWS_PROFILE=personal AWS_REGION=us-east-1 arc-create",
+    "deploy": "AWS_PROFILE=personal AWS_REGION=us-east-1 arc-deploy",
     "i": "arc-modules-install"
   },
   "domains": [
