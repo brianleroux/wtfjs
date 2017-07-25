@@ -1,34 +1,12 @@
+var fs = require('fs')
+var path = require('path')
 var arc = require('@architect/functions')
+var layout = require('@wtfjs/theme')
+var index = false
 
 function route(req, res) {
-  res({
-    html:`hello world`
-  })
+  if (!index) index = fs.readFileSync(path.join(__dirname, 'index.html')).toString()
+  res({html:layout(index)})
 }
 
-/*
-<% layout('layout') -%>
-
-<% for (var i = 0; i < posts.length; i++) { %>
-   <article>
-       <h1><%- posts[i].anchor() %></h1>
-       <div class="date">
-           <%- 'jan feb mar apr may june july aug sept oct nov dec'.split(' ')[posts[i].created().getMonth()] %>
-           <%- posts[i].created().getDate() %>
-           , <%- posts[i].created().getFullYear() %>
-       </div>
-       <div class="body"><%- posts[i].html() %></div>
-       <hr />
-   </article>
-<% } %>
-
-<div id="pager">
-    <% if (prevPage > 1) { %>
-    <a id="prev" href="/page/<%- prevPage %>">&larr;</a>
-    <% } %>
-    <% if (page != max) { %>
-    <a id="next" href="/page/<%- nextPage %>">&rarr;</a>
-    <% } %>
-</div>
-*/
 exports.handler = arc.html.get(route)

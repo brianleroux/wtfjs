@@ -1,8 +1,12 @@
+var fs = require('fs')
+var path = require('path')
 var arc = require('@architect/functions')
+var layout = require('@wtfjs/theme')
+var index = false
 
 function route(req, res) {
-  console.log(JSON.stringify(req, null, 2))
-  res({html:`hello world`})
+  if (!index) index = fs.readFileSync(path.join(__dirname, 'license.html')).toString()
+  res({html:layout(index)})
 }
 
 exports.handler = arc.html.get(route)
