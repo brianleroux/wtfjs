@@ -8,9 +8,6 @@
     "url": "git://github.com/brianleroux/wtfjs.git"
   },
   "author": "Brian Leroux <brian@westcoastlogic.com>",
-  "dependencies": {
-    "@architect/workflows": "^1.0.10"
-  },
   "subdomain": "wtfjs",
   "scripts": {
     "start": "NODE_ENV=testing arc-sandbox",
