@@ -1,7 +1,7 @@
 {
   "name": "wtf",
   "description": "The wtfs of javascript at wtfjs.com",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "homepage": "wtfjs.com",
   "repository": {
     "type": "git",
