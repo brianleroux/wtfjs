@@ -4,9 +4,9 @@ After struggling w/ the overly complex Chili jQuery plugin I had a second look a
 
 Only caveat: it only works on _pre_ tags. Thus:
 
-<code>
+```
     $(function(){
-        // change code elemnts into pre elements with class sh_javascript_dom
+        // change code elements into pre elements with class sh_javascript_dom
         $('code').each(function(){
             var node = $(this);
             node.hide()
@@ -19,7 +19,7 @@ Only caveat: it only works on _pre_ tags. Thus:
         // invoke clientside syntax highlighter
         sh_highlightDocument();
     });
-</code>
+```
 
 Not entirely hideous but plenty to wtf about. Inspect the actual code and compare to the embed above you'll notice I had to swap a nested _pre_ element with a string "pre tag would be here". It gets better: double line breaks mindfuck SHJS forcing it to create new nested pre tags. So no line double breaks. If that wasn't enough all the underscores in the class identifier have been removed. Daaamnit wtf?!
 

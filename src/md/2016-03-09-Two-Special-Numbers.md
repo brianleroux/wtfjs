@@ -34,4 +34,4 @@ Furthermore, both the largest possible fraction and integer refuse to wrap aroun
   j === (j + 1) // true
 ```
 
-- [@ionpot](https://github.com/ionpot)
+– [@ionpot](https://github.com/ionpot)

@@ -1,4 +1,4 @@
-So, '!!' converts a value to a boolean and ensures a boolean type.
+So, `!!` converts a value to a boolean and ensures a boolean type.
 
 ```
     !!false // --> false

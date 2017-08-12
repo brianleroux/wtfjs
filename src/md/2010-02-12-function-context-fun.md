@@ -3,4 +3,4 @@
 </code>
 
 - Thanks to [@tobeytailor](http://twitter.com/tobeytailor) for pointing out this beauty.
-- Updated: it throws error when execute code in Chrome 49
+- Updated: an error is thrown when the code is executed in Chrome 49

@@ -17,4 +17,4 @@ Its still hilarious. Now, check this out:
 
 [Explanation here.](http://stackoverflow.com/questions/1995113/strangest-language-feature/3297392#3297392)
 
-(By way of the wtfjs twitter firehouse. Cheers: [@devongovett](http://twitter.com/devongovett), [@getify](http://twitter.com/getify), [@mahemoff](http://twitter.com/mahemoff). [@cramforce](http://twitter.com/cramforce), [@mathias](http://twitter.com/mathias)!)
+(By way of the wtfjs twitter firehouse. Cheers: [@devongovett](http://twitter.com/devongovett), [@getify](http://twitter.com/getify), [@mahemoff](http://twitter.com/mahemoff), [@cramforce](http://twitter.com/cramforce), [@mathias](http://twitter.com/mathias)!)

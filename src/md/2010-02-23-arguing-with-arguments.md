@@ -1,6 +1,6 @@
 Nice arguments hackery going on here. 
 
-<code>
+```
     (function(a,b,c) {
         print(a,b,c); // one two three
         print(arguments[0], arguments[1], arguments[2]); // one two three
@@ -18,17 +18,17 @@ Nice arguments hackery going on here.
         args[1] = "up your";
         args[2] = "dataz";
     }
-</code>
+```
     
-<code>
+```
     // A more real world example:
     (function(arg1, arg2) {
         print(arg1, arg2);
-        //-> uno dose
+        //-> uno dos
         Array.prototype.shift.apply(arguments);
         print(arg1, arg2);
         //-> dose undefined
-    })('uno', 'dose');
-</code>
+    })('uno', 'dos');
+```
 
 Thanks to [@deadlyicon](http://twitter.com/deadlyicon)!

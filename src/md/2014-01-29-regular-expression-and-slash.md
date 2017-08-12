@@ -49,7 +49,7 @@ It returns
   "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 ```
 
-It is likely, I think that A-z literally means 'any character between 'A' and
+A-z literally means 'any character between 'A' and
 'z' in unicode code-point order, or at least charCode order. This allows (I
 think non-standard) statements like `/[ -y]/g`:
 

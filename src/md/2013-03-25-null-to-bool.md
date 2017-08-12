@@ -18,7 +18,7 @@ isn't **implicitly** converted:
     Boolean(null) // false
 ```
 
-See [The Abstract Equality Comparison Algorithm](http://es5.github.io/#x11.9.3)
+See [The Abstract Equality Comparison Algorithm](http://es5.github.io/#x11.9.3)  
 Null is only implicitly converted if compared to `undefined`
 
 — [@stevendesu][2]
