@@ -1,6 +1,6 @@
 This is another case of an accidental global:
 
-<code>
+```
     var a = 1
         b = 1;
 
@@ -11,7 +11,7 @@ This is another case of an accidental global:
 
     console.log(a); // prints 1
     console.log(b); // prints 2
-</code>
+```
 
 While debugging, one might be looking only at the “b” statements, but the
 problem is the missing comma after “a”. Since JavaScript has “automatic
