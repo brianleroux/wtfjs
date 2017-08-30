@@ -35,7 +35,7 @@ So we're hinting to the [[DefaultValue]] method within Array with the type of `S
 Unless of course, `IsCallable(toString)` (i.e. the object has a `.toString` method on it's prototype).
 
 > 2. If IsCallable(toString) is true, then,
->        a. Let str be the results of calling the [[Call]] internal metho of toString with O as the this value and an empty argument list.
+>      a. Let str be the results of calling the [[Call]] internal method of toString with O as the this value and an empty argument list.
 
 And according to 15.4.4.2 Array.prototype.toString ():
 
@@ -51,8 +51,7 @@ joining all the internal members of the array with the default separator is the 
 When an Array calls join on itself, it's going from 1 .. len (all it's members) and calling `ToString` on these members and concatenating
 them together.  Essentially doing this:
 
-<code>
-    
+```
     Array.prototype.join = function (separator) {
         var result = "";
         if ("undefined" === typeof separator) {
@@ -64,8 +63,7 @@ them together.  Essentially doing this:
         }
         return result;
     };
-
-</code>
+```
 
 So in the end, we end up with weird stuff like this actually working, as `[]`, `null`, and `undefined` all result in "" when their
 respective `ToPrimitive` methods ask for `[[DefaultValue]]` with String as the type hint.

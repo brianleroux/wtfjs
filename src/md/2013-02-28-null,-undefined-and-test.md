@@ -19,7 +19,7 @@ This happens because regex.test() converts its parameter to a string:
 
 The string "null" matches the regular expression `/^[a-z]{1,10}$/`
 
-- [@stevendesu][2]
+— [@stevendesu][2]
 
 [1]:https://twitter.com/damienklinnert
 [2]:https://github.com/stevendesu

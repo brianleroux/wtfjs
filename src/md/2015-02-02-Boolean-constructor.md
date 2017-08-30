@@ -1,6 +1,6 @@
 Why would you _ever_ use this function, or constructor, or ...?
 
-<code>
+```
 > Boolean(false)
 false
 > new Boolean(false)
@@ -15,7 +15,7 @@ true
 {}
 > if (new Boolean(false)) console.log('Indeed')
 Indeed
-</code>
+```
 
 You couldn't _make_ this stuff up.
 

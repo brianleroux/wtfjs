@@ -25,8 +25,7 @@ Note that we can cast strings to numbers by preceding them with +:
 
 — [@wojciechfornal][2]
 
-[1]:https://twitter.com/jhnnns
-[2]:https://twitter.com/wojciechfornal
+
 
 ***
 
@@ -45,6 +44,8 @@ typeof NaN === 'number'; // Despite being "Not-A-Number"
 
 ```
 
-— [kirillov-artur][1]
+— [kirillov-artur][3]
 
-[1]:https://github.com/kirillov-artur
+[1]:https://twitter.com/jhnnns
+[2]:https://twitter.com/wojciechfornal
+[3]:https://github.com/kirillov-artur

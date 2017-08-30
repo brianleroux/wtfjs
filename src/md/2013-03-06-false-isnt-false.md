@@ -4,7 +4,7 @@
 ```
 
 This is expected behaviour as == doesn't do value equality,
-but rather it does numeric value equality[1], thus 'false' is truethy, thus equals 1
+but rather it does numeric value [equality][1], thus 'false' is truthy, thus equals 1
 
 
 — [@grnadav][2]
