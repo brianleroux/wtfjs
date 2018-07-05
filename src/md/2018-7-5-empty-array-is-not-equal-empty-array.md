@@ -5,9 +5,8 @@
 
     myArray == [];
     => false
-    ```
+```
 But then we have:
-
 ```
     [].length;
     => 0
