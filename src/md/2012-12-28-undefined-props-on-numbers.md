@@ -1,4 +1,4 @@
-```
+``` javascript
     function getBounds(node) {
         var n = node || 0;
         return { width: n.width, height: n.height };

@@ -1,6 +1,6 @@
 Void is a blackhole...
 
-```
+``` javascript
     var void = function () {}
     //=> SyntaxError: missing variable name
 ```

@@ -1,6 +1,6 @@
 What do you think this constructor returns for `new Dude('Bob')`? Doug or Bob?
 
-```
+``` javascript
 	function Dude(name){
 		this.name = name;
 		return {name: 'Doug'};
@@ -8,7 +8,7 @@ What do you think this constructor returns for `new Dude('Bob')`? Doug or Bob?
 ```
 
 Answer:
-```
+``` javascript
 	var bob = new Dude('Bob');
 	// { name: 'Doug' }
 	bob instanceof Dude
@@ -16,7 +16,7 @@ Answer:
 ```
 
 Huh!? So you can just slip in anything? What about arrays?
-```
+``` javascript
 	function Dude(name){
 		this.name = name;
 		return [1, 2, 3];
@@ -26,7 +26,7 @@ Huh!? So you can just slip in anything? What about arrays?
 ```
 
 That can't be! What about...
-```
+``` javascript
 	function Dude(name){
 		this.name = name;
 		return 3;

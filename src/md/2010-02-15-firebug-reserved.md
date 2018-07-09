@@ -1,4 +1,4 @@
-```
+``` javascript
     // whilst in firebug, try:
     var console = {}; // or, well - anything actually...
 ```

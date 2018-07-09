@@ -40,6 +40,8 @@ Thanks [Paul Irish](https://twitter.com/paul_irish) for the explanation.
 Note that your code won't be highlighted :( If you'd like to figure out how to
 get '```' to highlight, please help and submit PR! Thank you! - @DTrejo
 
+I might have figured highlighting out, but it requires further editing on your side - [paulstelian97](http://github.com/paulstelian97)
+
 the code
 ---
 

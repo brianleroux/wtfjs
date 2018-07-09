@@ -1,4 +1,4 @@
-```
+``` javascript
     parseInt('fuck');     // NaN
     parseInt('fuck', 16); // 15
 ```
@@ -11,7 +11,7 @@ So remember kids, always supply a radix!
 This occurs because parseInt will continue parsing character-by-character
 until it hits a character it doesn't know. The `f` in `fuck` is hexadecimal
 15. You can get similar behavior with:
-```
+``` javascript
     parseInt('3fucks') // 3
     parseInt('3fucks', 16) // 3f in hex = 63
 ```

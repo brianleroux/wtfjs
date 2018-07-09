@@ -1,13 +1,13 @@
 Did you know that JavaScript can compare arrays using lexicographical ordering?
 
-```
+``` javascript
   [1, 2, 4] < [1, 2, 5]  // true
   [1, 3, 4] < [1, 2, 5]  // false
 ```
 
 Just don't expect trichotomy to hold.
 
-```
+``` javascript
   [1, 2, 3] === [1, 2, 3]   // false
   [1, 2, 3] <   [1, 2, 3]   // false
   [1, 2, 3] ==  [1, 2, 3]   // false
@@ -16,7 +16,7 @@ Just don't expect trichotomy to hold.
 
 Oh, and just in case you're wondering, it knows it's messing with you.
 
-```
+``` javascript
   [1, 2, 3] <= [1, 2, 3]   // true
   [1, 2, 3] >= [1, 2, 3]   // true
 ```
@@ -37,7 +37,7 @@ return the result of the comparison ToPrimitive(x) == y.
 10.Return false.
 
 
-```
+``` javascript
 [] === []; // false
 [] == []; // false
 
@@ -55,7 +55,7 @@ The Less-than Operator ( < ) and The Greater-than Operator ( > )
 5.Let r be the result of performing abstract relational comparison lval < rval or lval > rval.
 6.If r is undefined, return false. Otherwise, return r.
 
-```
+``` javascript
 [] < []; // false
 [] > []; // false
 // its like 1 < 1 ==> false and 1 > 1 ==> false
@@ -66,7 +66,7 @@ http://www.ecma-international.org/ecma-262/5.1/#sec-11.8.3
 5.Let r be the result of performing abstract relational comparison rval < lval with LeftFirst equal to false.
 6.If r is true or undefined, return false. Otherwise, return true.
 
-```
+``` javascript
 [] <= []; // true
 [] >= []; // true
 // its like 1 <= 1 ==> true and 1 >= 1 ==> true

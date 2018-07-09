@@ -1,4 +1,4 @@
-```
+``` javascript
     var foo = { 
         toString: function () { 
             return 5; 

@@ -1,6 +1,6 @@
 Less of a wtf and more of a gotcha. In  [ExpressJS](http://expressjs.com/). you can serve static files from a _/public_ directory with this simple directive in your configure block:
 
-```
+``` javascript
     configure(function() {
         set("root", __dirname);  
         // allow static file serving from public directory

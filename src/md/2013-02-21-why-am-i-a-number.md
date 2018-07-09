@@ -1,6 +1,6 @@
 Can someone tell me?
 
-```
+``` javascript
     "Why am I a " + typeof + ""; // "Why am I a number"
 ```
 
@@ -15,7 +15,7 @@ can be used as an unary operator (syntax is: + UnaryExpression). + converts its 
 
 Note that we can cast strings to numbers by preceding them with +:
 
-```
+``` javascript
 
 (2 + "3");  // 23
 (2 + +"3"); // 5
@@ -29,7 +29,7 @@ Note that we can cast strings to numbers by preceding them with +:
 
 ***
 
-```
+``` javascript
 typeof +""; // number
 
 // even

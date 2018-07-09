@@ -1,5 +1,5 @@
 **Not empty array doesn't contain its element:**
-```
+``` javascript
 var a = [,];
 a.length; //1, some element exists
 a.indexOf(a[0]); //-1
@@ -11,7 +11,7 @@ a.indexOf(a[0]); //-1
 `a[0]` is `undefined`. `undefined` is the javascript primitive type. But when we init an array 
 the ES5 spec tells us the following about [array initialisers](http://es5.github.io/#x11.1.4):
 
-```
+``` javascript
 Elided array elements are not defined.
 ...
 The missing array element contributes to the length of the Array and increases the index of subsequent elements.
@@ -19,7 +19,7 @@ The missing array element contributes to the length of the Array and increases t
 
 Elements are not `undefined`, they are `not initialized`.
 When we invoke `indexOf` on an array this is one of the steps that happens:
-```
+``` javascript
 Let kPresent be the result of calling the [[HasProperty]] internal method of O with argument ToString(k).
 ```
 

@@ -2,7 +2,7 @@ This is much more awesome. I have to thank the guys at [HowToNode.org](http://ho
 
 The only remaining problem with the syntax highlighting is now nested &lt;code&gt; elements have to be escaped to display correctly in the final render. 
 
-```
+``` javascript
     // replace the raw code blocks with prettyfied html
     t = t.replace(/&lt;code&gt;[^&lt;]+&lt;\/code&gt;/g, function(code) {
         return prettyfy(code.match(/&lt;code&gt;([\s\S]+)&lt;\/code&gt;/)[1]);

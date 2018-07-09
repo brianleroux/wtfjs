@@ -4,7 +4,7 @@ arithmetics and operator ambiguity / overloading.
 If you can figure out what this returns on the first guess, I'll give you a
 great big hug the next time I see you:
 
-```
+``` javascript
     // is there an error (if not, what do I return?)
     "3" -+-+-+ "1" + "1" / "3" * "6" + "2"
 ```
@@ -20,7 +20,7 @@ than that, aren't we?).
 
 The precedence of operators in JavaScript are (from highest to lowest):
 
-```
+``` javascript
     delete
     void
     typeof
@@ -123,7 +123,7 @@ NOTE: This ignores your grammar teacher's rules about double negatives.
 Let's make this line into an expression tree.  After unary operators are
 evaluated, we have:
 
-```
+``` javascript
               +
 
          "2"         +
@@ -138,7 +138,7 @@ evaluated, we have:
 However, we don't know what types are implicitly cast yet.  Let's make another
 tree showing non-ambiguous operations (`/`, `*`, `-`):
 
-```
+``` javascript
               +
 
          "2"         +
@@ -154,7 +154,7 @@ This greatly simplifies the bottom of the tree as they're all now numbers. We
 continue evaluating from bottom left most child up, which evaluates the
 expression as so: (3-1)+((1/3)*2) = 2 + 2 = 4.  This leaves us with this tree:
 
-```
+``` javascript
           +
 
      "2"      4
@@ -165,7 +165,7 @@ This last operation is ambiguous, so we look to see if either operand is a
 string (which `"2"` is), so the type of `lprim` or `rprim` is `String` after
 calling `ToPrimitive` (which `rprim is`), so the final result is
 
-```
+``` javascript
     "42"
 ```
 

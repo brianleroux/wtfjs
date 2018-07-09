@@ -1,6 +1,6 @@
 This one is fun and sneaky. 
 
-```
+``` javascript
     (function(){
         var x = y = 1;
     })();

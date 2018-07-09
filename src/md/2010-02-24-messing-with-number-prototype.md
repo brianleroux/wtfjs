@@ -1,6 +1,6 @@
 [@rcanine](http://twitter.com/rcanine) shows us this interesting this coerce behaviour within the prototype of Number. Fun!
 
-```
+``` javascript
     (1) === 1; // true
     
     Number.prototype.isOne = function () { return this === 1; }

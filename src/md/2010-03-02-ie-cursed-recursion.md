@@ -1,4 +1,4 @@
-```
+``` javascript
     window.recurse = function(times) {
         if (times !== 0)
             recurse(times - 1);

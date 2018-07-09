@@ -1,13 +1,13 @@
 Remember folks, parseInt() is not eval().
 
-```
+``` javascript
   parseInt("1", 10); // 1
   eval("1") // 1
 ```
 
 Pretty much the same thing....wait.
 
-```
+``` javascript
   parseInt("1 + 1", 10); // 1
   eval("1 + 1") // 2
 ```
@@ -15,7 +15,7 @@ Pretty much the same thing....wait.
 In the first example the first digit is recognized and the rest of the string is thrown away. How intuitive.
 eval() at least gets it right.
 
-```
+``` javascript
   parseInt("1 - 1", 10); // 1
   eval("1 - 1") // 0
 ```
@@ -23,14 +23,14 @@ eval() at least gets it right.
 The string example takes the first digit and just throws out the rest of the string.
 And again, eval() with the correct solution.
 
-```
+``` javascript
   parseInt("1" + "1", 10) // 11
   eval("1" + "1") // 11
 ```
 
 This time they both get the wrong answer, because the strings are concatenated before the numbers are evaluated.
 
-```
+``` javascript
   parseInt("1" - "1", 10); // 0
   eval ("1" - "1") // 0
 ```

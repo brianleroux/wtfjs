@@ -1,6 +1,6 @@
 ECMAScript allows you to use unicode variable names, just use the usual \uXXXX codes:
 
-```
+``` javascript
     var \u1000 = {
       \u1001: 'foo',
       \u1011: 'bar'
