@@ -1,6 +1,6 @@
 There seems to be a number that fulfills all of these conditions:
 
-```
+``` javascript
   i * i = 0
   i + 1 = 1
   i - 1 = -1
@@ -9,7 +9,7 @@ There seems to be a number that fulfills all of these conditions:
 
 Turns out that this magical number is not even an integer:
 
-```
+``` javascript
   i = Number.MIN_VALUE
 ```
 
@@ -17,7 +17,7 @@ It's the smallest possible fraction JavaScript can produce, and is treated as ze
 
 Conversely, the largest possible fraction claims to be greater than one, but reduces to zero:
 
-```
+``` javascript
   i = Number.MAX_VALUE
 
   i > 1 // true
@@ -26,7 +26,7 @@ Conversely, the largest possible fraction claims to be greater than one, but red
 
 Furthermore, both the largest possible fraction and integer refuse to wrap around:
 
-```
+``` javascript
   i = Number.MAX_VALUE
   j = 0xffffffffffffffff
 

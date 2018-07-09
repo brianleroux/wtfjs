@@ -2,7 +2,7 @@ When I use regular expressions and I want to validate a range of letters, I can
 do it using `a-z` or `A-Z`. Even when I use `A-z` it works fine too. The problem
 comes doing some test:
 
-```
+``` javascript
   /[A-Z]/.test("A"); // true
   /[A-Z]/.test("b"); // false
   /[A-Z]/.test("Z"); // true
@@ -15,7 +15,7 @@ comes doing some test:
 
 The weird thing comes when I do this test:
 
-```
+``` javascript
   /[A-z]/.test("A"); // true
   /[A-z]/.test("a"); // true
   /[A-z]/.test("Z"); // true

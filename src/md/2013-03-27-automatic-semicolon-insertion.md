@@ -1,6 +1,6 @@
 This is another case of an accidental global:
 
-```
+``` javascript
     var a = 1
         b = 1;
 

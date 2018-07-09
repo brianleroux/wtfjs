@@ -1,4 +1,4 @@
-```
+``` javascript
 function Test(){}
 Test.prototype = null;
 var a = new Test();

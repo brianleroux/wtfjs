@@ -1,6 +1,6 @@
 Everyone loves Yoda Conditionals, right? They stop you from accidentally assigning stuff when you should be comparing, breaking everything! Or do they?
 
-```
+``` javascript
     function test (a) {
       if (undefined = a) {
         a = {}

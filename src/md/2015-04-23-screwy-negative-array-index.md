@@ -1,4 +1,4 @@
-```
+``` javascript
   var arr = [1, 2, 3, 4, 5, 6, 7, 8];
   arr[-1] = "yo wazzzup";
   console.log(arr.length); // > 8

@@ -1,6 +1,6 @@
 The following will return an Integer with a default of 0 from any String or Number.
 
-```
+``` javascript
     function toInt(number) {
       return number && + number | 0 || 0;
     }

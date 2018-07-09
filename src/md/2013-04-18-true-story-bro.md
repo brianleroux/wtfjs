@@ -1,8 +1,8 @@
 True story bro!
 
-<code>
+``` javascript
     'true' == true  // returns false
-</code>
+```
 
 — [ProfessorWeb][1]
 

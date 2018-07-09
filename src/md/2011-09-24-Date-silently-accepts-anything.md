@@ -1,4 +1,4 @@
-```
+``` javascript
     d = new Date("couldn't you please throw an exception here instead?");
 
     // No! You get the joy of discovering this error somewhere unrelated,

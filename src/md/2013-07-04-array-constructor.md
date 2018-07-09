@@ -1,4 +1,4 @@
-```
+``` javascript
     Array(20).map(function(elem) { return 'a'; }); // Array of undefined x 20
 ```
 

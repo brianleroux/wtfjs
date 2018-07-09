@@ -1,6 +1,6 @@
 Why would you _ever_ use this function, or constructor, or ...?
 
-```
+``` javascript
 > Boolean(false)
 false
 > new Boolean(false)

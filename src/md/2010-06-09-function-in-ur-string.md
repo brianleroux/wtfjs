@@ -1,6 +1,6 @@
 Old friend (_and clearly damaged by a career of JavaScript programming_) [@jakedevine](http://twitter.com/jakedevine) threw this down on twitter a few days ago.
 
-```
+``` javascript
     var Z = "constructor"; 
     Z[Z][Z]("alert('wtfjs!')")();
     // alerts wtfjs!
@@ -8,7 +8,7 @@ Old friend (_and clearly damaged by a career of JavaScript programming_) [@jaked
 
 Ok. So wtf exactly is happening here?
 
-```
+``` javascript
     Z[Z]
     // function String() { [native code] }
 
@@ -18,7 +18,7 @@ Ok. So wtf exactly is happening here?
 
 AHA! The constructor property of a string is `String` and the constructor property of `String` is `Function`. Makes sense.
 
-```
+``` javascript
     Z[Z][Z]("console.log('new Function accepts string for eval as argument')")();
     // new Function accepts string for eval as argument
 ```

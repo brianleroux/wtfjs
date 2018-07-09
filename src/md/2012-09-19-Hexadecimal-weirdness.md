@@ -1,20 +1,20 @@
 In JS you can represent numbers in hexadecimal, right?
 
-<code>
+``` javascript
     var hex = 0xFF55;
-</code>
+```
 
 You can also perform shift operations, right?
 Left shift is equivalent to a multiplication...
 
-```
+``` javascript
     var hex = 0xFF55 << 8;  // Shift 8 bits = add 0x00 at the end.
     alert(hex.toString(16)); // 0xFF5500
 ```
 
 But from a certain point, this produces negative numbers
 
-```
+``` javascript
     // Before 0x800000 it's ok
     alert((0x777777 << 8).toString(16)); // 0x77777700
 
@@ -44,7 +44,7 @@ So in binary:
 As for why multiplying 0x888888 * 0x100 yields a different result, both operands to the * operator are numeric, so
 each is casted to a IEEE 64-bit double, then multiplied, which means this is what is really happening:
 
-```
+``` javascript
     0x888888 * 0x100 === 8947848.0 * 256.0 === 2290649088.0
 ```
 

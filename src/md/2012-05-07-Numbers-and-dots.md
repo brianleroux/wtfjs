@@ -1,6 +1,6 @@
 A JavaScript syntax oddity with Numbers and Dots:
 
-```
+``` javascript
 	// Ok, you may have seen wrapping a number literal with parens to call Number methods
 	(42).toFixed(2); // "42.00"
 

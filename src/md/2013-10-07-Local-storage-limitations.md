@@ -1,7 +1,7 @@
 The **local storage** functionality in browsers is a bit limited and this can
 lead to some rather surprising behaviour.
 
-```
+``` javascript
   localStorage[0] = false;
 
   if (localStorage[0]) {

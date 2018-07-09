@@ -1,7 +1,7 @@
 It turns out that changing the value of an argument variable will change its
 value in the `arguments` "array":
 
-```
+``` javascript
     > function hello(what) {
     .     what = "world";
     .     return "Hello, " + arguments[0] + "!";

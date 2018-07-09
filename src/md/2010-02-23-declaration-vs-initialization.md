@@ -1,4 +1,4 @@
-```
+``` javascript
     var a = 8;
     var someFunc = function(){
         document.write(a);

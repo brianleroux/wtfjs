@@ -1,5 +1,5 @@
 In Chrome
-```
+``` javascript
 document.all // HTMLAllCollection[843]
 document.all[0] // <html>...</html>
 

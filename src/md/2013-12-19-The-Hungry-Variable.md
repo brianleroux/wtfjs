@@ -1,5 +1,5 @@
 Consider this JS:
-```
+``` javascript
   x = /[/ + "javascript"[0] + '///'
 ```
 What do you expect the value of `x` to be?
@@ -7,7 +7,7 @@ What do you expect the value of `x` to be?
 Those well-versed in Javascript's concatenation may either reject the statement
 or perhaps say:
 
-```
+``` javascript
   "/[/j///"
 ```
 
@@ -27,7 +27,7 @@ Those who don't immediately see through this may notice a few things.
 What should be noted is that the errors for `/(/` and `/[/` are subtly
 different. In Chromium console:
 
-```
+``` javascript
   /(/
   //SyntaxError: Invalid regular expression: /(/: Unterminated group
 
@@ -53,7 +53,7 @@ the `//'` is simply a comment.
 If you want the pre to do as expected, add a single forward slash before the
 first "[":
 
-```
+``` javascript
   x = /\[/ + "javascript"[0] + '///'
   "/\[/j///"
 

@@ -1,6 +1,6 @@
 `isFinite` function of JavaScript tests whether a number is finite.
 
-```
+``` javascript
     isFinite(42); // true
     isFinite(1/0); // false
     isFinite(0/0); // NaN is not finite -> false
@@ -10,14 +10,14 @@
 
 These are normal results.
 
-```
+``` javascript
     isFinite(); // false
     isFinite(undefined); // false
 ```
 
 Undefined values are not finite. These are normal results too.
 
-```
+``` javascript
     isFinite(null); // true
 ```
 

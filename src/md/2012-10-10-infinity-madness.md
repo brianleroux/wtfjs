@@ -1,4 +1,4 @@
-```js
+```javascript
     parseFloat( 'Infinity' ) // returns Infinity
     Number( 'Infinity' ) // returns Infinity
     parseInt( 'Infinity' ) // returns NaN
@@ -7,7 +7,7 @@
 
 But of course, you should always specify a radix when calling `parseInt`:
 
-```js
+```javascript
     parseInt( 'Infinity', 10 ) // returns NaN
     // ...
     parseInt( 'Infinity', 18 ) // returns NaN...

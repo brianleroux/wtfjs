@@ -1,5 +1,5 @@
 Some argue this makes sense. Some ppl also like to sniff glue.
 
-<code>
+``` javascript
     NaN === NaN // false
-</code>
+```

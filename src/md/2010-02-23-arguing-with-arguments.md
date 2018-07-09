@@ -1,6 +1,6 @@
 Nice arguments hackery going on here. 
 
-```
+``` javascript
     (function(a,b,c) {
         print(a,b,c); // one two three
         print(arguments[0], arguments[1], arguments[2]); // one two three
@@ -20,7 +20,7 @@ Nice arguments hackery going on here.
     }
 ```
     
-```
+``` javascript
     // A more real world example:
     (function(arg1, arg2) {
         print(arg1, arg2);

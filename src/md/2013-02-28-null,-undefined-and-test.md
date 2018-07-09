@@ -2,7 +2,7 @@ Checking a variable for one word with one to ten letters lowercase only?
 
 Try this regular expression: `/^[a-z]{1,10}$/.test('wakaluba')`.
 
-```
+``` javascript
     /^[a-z]{1,10}$/.test(null);
     /^[a-z]{1,10}$/.test(undefined);
 ```
@@ -13,7 +13,7 @@ Both should obviously fail, but return **true**. srsly, WTF JS?
 
 This happens because regex.test() converts its parameter to a string:
 
-```
+``` javascript
     String(null) // "null"
 ```
 

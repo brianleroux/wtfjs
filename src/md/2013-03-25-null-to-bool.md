@@ -1,10 +1,10 @@
-```
+``` javascript
     null == false // false
 ```
 Okay, we know this. Null doesn't convert to boolean.
 
 Now try this...
-```
+``` javascript
     !null // true
 ```
 
@@ -14,7 +14,7 @@ Well, this is awkward.
 
 The issue here is that Null **can** be converted to a boolean, it just
 isn't **implicitly** converted:
-```
+``` javascript
     Boolean(null) // false
 ```
 
