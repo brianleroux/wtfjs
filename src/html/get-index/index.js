@@ -1,9 +1,9 @@
 var fs = require('fs')
 var path = require('path')
 var arc = require('@architect/functions')
-var layout = require('@wtfjs/theme')
+var layout = require('@architect/shared/layout')
 var filter = f=> f.includes('.md')
-var files = fs.readdirSync(__dirname + '/node_modules/@wtfjs/md').filter(filter).reverse()
+var files = fs.readdirSync(__dirname + '/node_modules/@architect/shared/md').filter(filter).reverse()
 var index = false
 
 function link(file) {

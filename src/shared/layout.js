@@ -1,9 +1,8 @@
 var fs = require('fs')
 var path = require('path')
-var css = false
+var css = fs.readFileSync(path.join(__dirname, 'index.css')).toString()
 
 module.exports = function layout(body) {
-  if (!css) css = fs.readFileSync(path.join(__dirname, 'index.css')).toString()
   return `
 <!DOCTYPE html> <!-- OOoooooh HTML5! -->
 <html>

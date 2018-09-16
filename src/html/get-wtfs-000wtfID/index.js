@@ -3,11 +3,11 @@ var fs = require('fs')
 var path = require('path')
 var exists = require('file-exists')
 var arc = require('@architect/functions')
-var layout = require('@wtfjs/theme')
+var layout = require('@architect/shared/layout')
 
 function route(req, res) {
   var filename = req.params.wtfID + '.md'
-  var filepath = path.join(__dirname, 'node_modules', '@wtfjs', 'md', filename)
+  var filepath = path.join(__dirname, 'node_modules', '@architect', 'shared', 'md', filename)
   exists(filepath, function _exists(err, yasqueen) {
     if (err) {
       res({

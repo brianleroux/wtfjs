@@ -17,16 +17,15 @@ Share your wtfjs moment
 It has never been easier to contribute a wtf to wtfjs.com!
 
 - fork this repo
-- add your wtf under /posts (format: yyyy-mm-dd-title.md)
+- add your wtf under `src/shared/md` (format: `yyyy-mm-dd-title.md`)
 - don't forget to add your name and link to twitter/github at the bottom!
 - send a pull request
 - WTF
 
 ### Example post format
 <pre>
-
 ```
-    Array(20).map(function(elem) { return 'a'; }); // Array of undefined x 20
+Array(20).map(function(elem) { return 'a'; }); // Array of undefined x 20
 ```
 
 More info [here](http://www.ecma-international.org/ecma-262/5.1/#sec-15.4.4.19).
@@ -36,18 +35,6 @@ Thanks [Paul Irish](https://twitter.com/paul_irish) for the explanation.
 
 [1]:https://githubortwitter.com/yourusername
 </pre>
-
-Note that your code won't be highlighted :( If you'd like to figure out how to
-get '```' to highlight, please help and submit PR! Thank you! - @DTrejo
-
-the code
----
-
-- Currently supported Node: **v0.8.x**
-- The last version supported: **v0.4.x**
-- The last last version supported: **v0.1.96**
-  Migrations performed by [@dtrejo][1]
-
 
 <http://wtfjs.com> was created by [@brianleroux](http://twitter.com/brianleroux). Everything here is under the [WTFPL 2.0 license](http://wtfjs.com/license).
 

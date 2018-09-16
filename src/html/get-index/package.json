@@ -1,8 +1,7 @@
 {
   "name": "wtfjs-get-index",
   "dependencies": {
-    "@architect/functions": "^1.3.0",
-    "@wtfjs/md": "^2.0.0",
-    "@wtfjs/theme": "^1.0.1"
+    "@architect/data": "^2.0.5",
+    "@architect/functions": "^1.9.2"
   }
 }

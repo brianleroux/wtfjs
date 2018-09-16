@@ -9,18 +9,12 @@
   },
   "author": "Brian Leroux <brian@westcoastlogic.com>",
   "subdomain": "wtfjs",
-  "scripts": {
-    "start": "NODE_ENV=testing arc-sandbox",
-    "create": "AWS_PROFILE=personal AWS_REGION=us-east-1 arc-create",
-    "deploy": "AWS_PROFILE=personal AWS_REGION=us-east-1 arc-deploy",
-    "i": "arc-modules-install"
-  },
   "domains": [
     "wtfjs.com",
     "www.wtfjs.com"
   ],
   "license": "WTFPL",
-  "devDependencies": {
-    "@architect/workflows": "^1.0.10"
+  "dependencies": {
+    "@architect/workflows": "^3.4.2"
   }
 }
