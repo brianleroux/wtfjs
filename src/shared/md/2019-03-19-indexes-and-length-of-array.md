@@ -9,13 +9,23 @@ Lets create an empty array, and check its length is `0`
 Lets add something to its first place:
 
 ```
+  var arr = []
   arr[0] = 'I am the first';
   arr.length; // 1
 ```
 
 Oh, what if...
 
+
 ```
+  var arr = []
+  arr[3] = 'I am the first';
+  arr.length; // 4
+```
+
+```
+  var arr = []
+  arr[0] = 'I am the first';
   arr[15] = 'actually, i am the second';
   arr.length; // 16
 ```
