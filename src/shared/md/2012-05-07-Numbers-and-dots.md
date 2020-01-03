@@ -18,3 +18,8 @@ A JavaScript syntax oddity with Numbers and Dots:
 ```
 
 [kensnyder](https://github.com/kensnyder) via [@ryanflorence](https://twitter.com/ryanflorence/status/199523604092821504)
+
+**Explanation**
+JS processes the characters and when it finds the dot after 42 it thinks, 42 must be decimal and expects further digits after the dot. A string is obviously not a number therefore JS throws an error.
+
+— [@shaedrich](https://github.com/shaedrich)
