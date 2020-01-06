@@ -8,6 +8,7 @@ var files = fs.readdirSync(__dirname + '/node_modules/@architect/shared/md').fil
 function link(file) {
   var val = file.replace('.md', '')
   var name = val.replace(/-/g, ' ')
+  var name = encodeURI(name)
   return `<li><a href=/wtfs/${val}>${name}</a></li>`
 }
 
