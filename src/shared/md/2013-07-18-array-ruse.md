@@ -1,6 +1,6 @@
-``` javascript
+<pre lang="javascript"> javascript
 [,,,].join() // ==> ",,"
-```
+</pre>
 
 wtf?
 
@@ -21,9 +21,9 @@ allowed by Javascript and that's the case. So `[1,2,3,]` equals to `[1,2,3]`.
 So literally `[,,,]` is something like `[undefined, undefined, undefined,]`.
 You can add `undefined` to the end explicitly to get an array with 4 elements:
 
-``` javascript
+<pre lang="javascript"> javascript
 [,,,undefined].join() // ==> ',,,'
-```
+</pre>
 
 — [@ixti][3]
 

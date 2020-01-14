@@ -1,6 +1,6 @@
 A JavaScript syntax oddity with Numbers and Dots:
 
-```
+<pre lang="javascript">
 	// Ok, you may have seen wrapping a number literal with parens to call Number methods
 	(42).toFixed(2); // "42.00"
 
@@ -15,7 +15,7 @@ A JavaScript syntax oddity with Numbers and Dots:
 
 	// Hey, so what about 3 dots!? Firefox gives XML-related error (WTF?)
 	42...toFixed(2); // TypeError: XML descendants internal method called on incompatible Number
-```
+</pre>
 
 [kensnyder](https://github.com/kensnyder) via [@ryanflorence](https://twitter.com/ryanflorence/status/199523604092821504)
 

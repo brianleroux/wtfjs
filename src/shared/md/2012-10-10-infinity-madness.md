@@ -1,13 +1,13 @@
-```js
+<pre lang="javascript">
     parseFloat( 'Infinity' ) // returns Infinity
     Number( 'Infinity' ) // returns Infinity
     parseInt( 'Infinity' ) // returns NaN
-```
+</pre>
 — [@fivetanley][1]
 
 But of course, you should always specify a radix when calling `parseInt`:
 
-```js
+<pre lang="javascript">
     parseInt( 'Infinity', 10 ) // returns NaN
     // ...
     parseInt( 'Infinity', 18 ) // returns NaN...
@@ -24,7 +24,7 @@ But of course, you should always specify a radix when calling `parseInt`:
     parseInt( 'Infinity', 36 ) // returns 1461559270678...
     parseInt( 'Infinity', 37 ) // returns NaN
     // ...
-```
+</pre>
 — [@stuartpb][2]
 
 [1]: https://twitter.com/fivetanley

@@ -1,5 +1,5 @@
-<code>
+<pre lang="javascript">
     typeof NaN // number, of course.
-</code>
+</pre>
 
 Now that makes sense.

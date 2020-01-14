@@ -1,6 +1,6 @@
 The following will return an Integer with a default of 0 from any String or Number.
 
-```
+<pre lang="javascript">
     function toInt(number) {
       return number && + number | 0 || 0;
     }
@@ -12,7 +12,7 @@ The following will return an Integer with a default of 0 from any String or Numb
     console.log(toInt("0"));  // 0
     console.log(toInt(Number.NaN));  // 0
     console.log(toInt(1/0));  // 0
-```
+</pre>
 
 Explanation
 --

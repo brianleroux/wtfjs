@@ -1,9 +1,9 @@
-```
+<pre lang="javascript">
     function getBounds(node) {
         var n = node || 0;
         return { width: n.width, height: n.height };
     }
-```
+</pre>
 
 If you call `getBounds()` with _null_, you'll get back `{ width: undefined, height: undefined }`
 because in JS, numbers have properties (inherited from Number), and using an undefined

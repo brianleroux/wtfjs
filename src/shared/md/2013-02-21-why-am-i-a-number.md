@@ -1,8 +1,8 @@
 Can someone tell me?
 
-```
+<pre lang="javascript">
     "Why am I a " + typeof + ""; // "Why am I a number"
-```
+</pre>
 
 — [@jhnnns][1]
 
@@ -15,13 +15,13 @@ can be used as an unary operator (syntax is: + UnaryExpression). + converts its 
 
 Note that we can cast strings to numbers by preceding them with +:
 
-```
+<pre lang="javascript">
 
 (2 + "3");  // 23
 (2 + +"3"); // 5
 (+"");      // 0
 
-```
+</pre>
 
 — [@wojciechfornal][2]
 
@@ -29,7 +29,7 @@ Note that we can cast strings to numbers by preceding them with +:
 
 ***
 
-```
+<pre lang="javascript">
 typeof +""; // number
 
 // even
@@ -42,7 +42,7 @@ typeof -"foo"; // "number"
 // because
 typeof NaN === 'number'; // Despite being "Not-A-Number"
 
-```
+</pre>
 
 — [kirillov-artur][3]
 

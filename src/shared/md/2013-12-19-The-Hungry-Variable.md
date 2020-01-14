@@ -1,21 +1,21 @@
 Consider this JS:
-```
+<pre lang="javascript">
   x = /[/ + "javascript"[0] + '///'
-```
+<pre lang="javascript">
 What do you expect the value of `x` to be?
 
 Those well-versed in Javascript's concatenation may either reject the statement
 or perhaps say:
 
-```
+<pre lang="javascript">
   "/[/j///"
-```
+</pre>
 
 Chromium's console, however says:
-```
+<pre lang="javascript">
   x = /[/ + "javascript"[0] + '///'
   /[/ + "javascript"[0] + '/
-```
+</pre>
 
 ### The Hungry Variable
 Those who don't immediately see through this may notice a few things.
@@ -27,13 +27,13 @@ Those who don't immediately see through this may notice a few things.
 What should be noted is that the errors for `/(/` and `/[/` are subtly
 different. In Chromium console:
 
-```
+<pre lang="javascript">
   /(/
   //SyntaxError: Invalid regular expression: /(/: Unterminated group
 
   /[/
   //SyntaxError: Invalid regular expression: missing /
-```
+</pre>
 
 It seems that Javascript cannot see the second `/` for some reason. This is
 because choice groups (`/[any letter]/`) don't require escaping of the forward-
@@ -53,14 +53,14 @@ the `//'` is simply a comment.
 If you want the pre to do as expected, add a single forward slash before the
 first "[":
 
-```
+<pre lang="javascript">
   x = /\[/ + "javascript"[0] + '///'
   "/\[/j///"
 
   //for comparison
   x = /[/ + "javascript"[0] + '///'
   /[/ + "javascript"[0] + '/
-```
+</pre>
 
 It is an interesting example of a statement that can completely change meaning
 with the insertion of one character without creating any errors.

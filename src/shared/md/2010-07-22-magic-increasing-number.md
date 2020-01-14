@@ -1,9 +1,9 @@
 Look at me, I'm the magic increasing number!
 
-```
+<pre lang="javascript">
     9999999999999999
     //=> 10000000000000000
-```
+</pre>
 
 
 --- [@thomasfuchs](http://twitter.com/thomasfuchs)

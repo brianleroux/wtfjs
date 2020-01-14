@@ -1,8 +1,8 @@
 True story bro!
 
-<code>
+<pre lang="javascript">
     'true' == true  // returns false
-</code>
+</pre>
 
 — [ProfessorWeb][1]
 

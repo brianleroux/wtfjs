@@ -4,10 +4,10 @@ arithmetics and operator ambiguity / overloading.
 If you can figure out what this returns on the first guess, I'll give you a
 great big hug the next time I see you:
 
-```
+<pre lang="javascript">
     // is there an error (if not, what do I return?)
     "3" -+-+-+ "1" + "1" / "3" * "6" + "2"
-```
+</pre>
 
 Now, I won't spoil the fun for those of you at home trying to do this mentally,
 but the answer probably isn't what you'd expect.  Go ahead, run it in a
@@ -20,7 +20,7 @@ than that, aren't we?).
 
 The precedence of operators in JavaScript are (from highest to lowest):
 
-```
+<pre lang="javascript">
     delete
     void
     typeof
@@ -74,7 +74,7 @@ The precedence of operators in JavaScript are (from highest to lowest):
                                                &=
                                                ^=
                                                |=
-```
+</pre>
 
 http://es5.github.com/#x11.4.6
 
@@ -123,7 +123,7 @@ NOTE: This ignores your grammar teacher's rules about double negatives.
 Let's make this line into an expression tree.  After unary operators are
 evaluated, we have:
 
-```
+<pre lang="javascript">
               +
 
          "2"         +
@@ -133,12 +133,12 @@ evaluated, we have:
           /     "6"      1      "3"
 
      "1"     "3"
-```
+</pre>
 
 However, we don't know what types are implicitly cast yet.  Let's make another
 tree showing non-ambiguous operations (`/`, `*`, `-`):
 
-```
+<pre lang="javascript">
               +
 
          "2"         +
@@ -148,26 +148,26 @@ tree showing non-ambiguous operations (`/`, `*`, `-`):
           /      6       1       3
 
       1       3
-```
+</pre>
 
 This greatly simplifies the bottom of the tree as they're all now numbers. We
 continue evaluating from bottom left most child up, which evaluates the
 expression as so: (3-1)+((1/3)*2) = 2 + 2 = 4.  This leaves us with this tree:
 
-```
+<pre lang="javascript">
           +
 
      "2"      4
-```
+</pre>
 
 
 This last operation is ambiguous, so we look to see if either operand is a
 string (which `"2"` is), so the type of `lprim` or `rprim` is `String` after
 calling `ToPrimitive` (which `rprim is`), so the final result is
 
-```
+<pre lang="javascript">
     "42"
-```
+</pre>
 
 (which is the obvious answer to life the universe and everything, really).
 

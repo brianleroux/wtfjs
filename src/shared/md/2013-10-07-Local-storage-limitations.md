@@ -1,13 +1,13 @@
 The **local storage** functionality in browsers is a bit limited and this can
 lead to some rather surprising behaviour.
 
-```
+<pre lang="javascript">
   localStorage[0] = false;
 
   if (localStorage[0]) {
       console.log('wtf'); // runs?!
   }
-```
+</pre>
 
 When checking the value stored in `localStorage`, it appears that the boolean
 was silently converted to the string `"false"`, which is truthy.
