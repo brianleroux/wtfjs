@@ -1,3 +1,3 @@
-<code>
+<pre lang="javascript">
     alert(111111111111111111111); // alerts 111111111111111110000
-</code>
+</pre>

@@ -1,6 +1,6 @@
 What happens when we set empty objects as keys:
 
-```
+<pre lang="javascript">
 var result = (function() {
     var foo = new Object();
     var bar = new Object();
@@ -13,11 +13,11 @@ var result = (function() {
 })();
 
 console.log(result); // "bar"
-```
+</pre>
 
 Explained:
 
-```
+<pre lang="javascript">
 var result = (function() {
     var foo = new Object(); // {}
     var bar = new Object(); // {}
@@ -39,6 +39,6 @@ var result = (function() {
 })();
 
 console.log(result); // "bar"
-```
+</pre>
 
 Thanks [Miguel Mota](http://www.miguelmota.com/).

@@ -1,18 +1,18 @@
 document.getElementById can be omitted in all major browsers, including IE6+.
 This is non-standard, but all of them save the elements ids as globals.
 
-```
+<pre lang="html">
     <div id="myId"></div>
     <script>
       alert(myId.id);         // --> myId
       alert(window.myId.id);  // --> myId
     </script>
-```
+</pre>
 
 
 Or do they? Let's search myId in the window object.
 
-```
+<pre lang="javascript">
     // Way 1
     alert('myId' in window);  // --> true (right...)
     // Way 2
@@ -23,13 +23,13 @@ Or do they? Let's search myId in the window object.
       }
     }
     alert(present);           // --> false (wat!)
-```
+</pre>
 
 Looks like all browsers create Shroedinger's globals, that are here and not here at the same time...
 
 What happens to globals when an element with the same id is created?
 
-```
+<pre lang="html">
     <script>
       global0 = 1;
     </script>
@@ -40,14 +40,14 @@ What happens to globals when an element with the same id is created?
       global0.innerHTML = "global0";     // --> nothing happens
       alert(global0);                    // --> 1
     </script>
-```
+</pre>
 
 So implicit getElementById's can't overload global vars, be they native or custom.
 What about the other way? Well, it depends on how the global var is set.
 
 Let's try with "window."
 
-```
+<pre lang="html">
     <div id=global1></div>
 
     <script>
@@ -56,13 +56,13 @@ Let's try with "window."
       window.global1 = 1;                   // Try to set the global var "global1"
       console.log(global1);                 // --> 1
     </script>
-```
+</pre>
 
 OK.
 
 Let's try without any prefix.
 
-```
+<pre lang="html">
     <div id=global2></div>
 
     <script>
@@ -72,13 +72,13 @@ Let's try without any prefix.
       global2.innerHTML = "hum";        // --> div contains "hum" on IE < 9, nothing happens on other browsers
       console.log(global2);             // --> "[object]" on IE < 9, 1 on other browsers
     </script>
-```
+</pre>
 
 Weird.
 
 And what happens if the global var is declared with "var" ?
 
-```
+<pre lang="html">
     <div id=global3></div>
 
     <script>
@@ -87,7 +87,7 @@ And what happens if the global var is declared with "var" ?
       var global3 = 1;                  // --> this breaks the two lines above (wtf!)
       console.log(global3);             // --> 1
     </script>
-```
+</pre>
 
 WAT.
 

@@ -1,6 +1,6 @@
-Nice arguments hackery going on here. 
+Nice arguments hackery going on here.
 
-```
+<pre lang="javascript">
     (function(a,b,c) {
         print(a,b,c); // one two three
         print(arguments[0], arguments[1], arguments[2]); // one two three
@@ -18,9 +18,9 @@ Nice arguments hackery going on here.
         args[1] = "up your";
         args[2] = "dataz";
     }
-```
-    
-```
+</pre>
+
+<pre lang="javascript">
     // A more real world example:
     (function(arg1, arg2) {
         print(arg1, arg2);
@@ -29,6 +29,6 @@ Nice arguments hackery going on here.
         print(arg1, arg2);
         //-> dose undefined
     })('uno', 'dos');
-```
+</pre>
 
 Thanks to [@deadlyicon](http://twitter.com/deadlyicon)!

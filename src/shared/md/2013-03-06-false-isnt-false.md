@@ -1,7 +1,7 @@
-```
+<pre lang="javascript">
     true == 'true'     // true
     false == 'false';  // false
-```
+</pre>
 
 This is expected behaviour as == doesn't do value equality,
 but rather it does numeric value [equality][1], thus 'false' is truthy, thus equals 1

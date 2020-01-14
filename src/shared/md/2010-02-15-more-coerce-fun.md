@@ -1,6 +1,6 @@
-<code>
+<pre lang="javascript">
     3 == "03" // true!
-</code>
+</pre>
 
 [@dandean](http://twitter.com/dandean) tweets, Don’t mind that zero there. I’m _sure_ it’s not important.
 

@@ -1,6 +1,6 @@
 See if you can guess what this will output:
 
-```
+<pre lang="javascript">
     function allNames() {
       var names = [ 'dan', 'anthony', 'pavel' ];
       for (name in names) {
@@ -9,7 +9,7 @@ See if you can guess what this will output:
     }
 
     allNames();
-```
+</pre>
 
 If you guessed this:
 
@@ -22,9 +22,9 @@ If you guessed this:
 
 What you might not have guessed, is what this will output:
 
-<code>
+<pre lang="javascript">
     console.log(window.name);
-</code>
+</pre>
 
 it's:
 
@@ -35,14 +35,14 @@ Iteration is assignment, and without the use of the `var` keyword, you're really
 
 So the original function is equivalent to:
 
-```
+<pre lang="javascript">
     function allNames() {
       var names = [ 'dan', 'anthony', 'pavel' ];
       for (window.name in names) {
         console.log(name);
       }
     }
-```
+</pre>
 
 By [@danlash][1]
 
