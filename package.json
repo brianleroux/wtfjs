@@ -14,7 +14,34 @@
     "www.wtfjs.com"
   ],
   "license": "WTFPL",
+  "scripts": {
+    "start": "sandbox",
+    "lint": "eslint ./app/**/*.mjs --fix"
+  },
   "dependencies": {
-    "@architect/workflows": "^3.4.2"
+    "@enhance/arc-plugin-enhance": "^5.0.4",
+    "arcdown": "^2.1.1"
+  },
+  "devDependencies": {
+    "@architect/sandbox": "^5.5.4",
+    "@enhance/types": "^0.6.0",
+    "eslint": "^8.30.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ]
+    },
+    "ignorePatterns": [],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2022
+    }
   }
 }
