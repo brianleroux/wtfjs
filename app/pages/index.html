@@ -1,0 +1,172 @@
+<style scope="global">
+  body {
+    height: 100vh;
+    background-color: #C1FFFB;
+    background-image: linear-gradient(180deg, #74F1FF 71.87%, #C1FFFB 100%);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    --navy: #003451;
+    --lilac: #AD6EF9;
+  }
+
+  main {
+    min-width: 17rem;
+    max-width: 52rem;
+    height: 100%;
+  }
+
+  .welcome {
+    max-width: 26rem;
+  }
+
+  .color-light {
+    color: var(--light);
+  }
+
+  .color-lilac {
+    color: var(--lilac);
+  }
+
+  .border-lilac {
+    border-color: var(--lilac);
+  }
+
+  .bg-navy {
+    background-color: var(--navy);
+  }
+
+  .bg-lilac {
+    background-color: var(--lilac);
+  }
+
+  .link-btn {
+    height: 4rem;
+  }
+
+  .discord-logo {
+    width: 1.75rem;
+  }
+
+  .radius5 {
+    border-radius: 5px;
+  }
+
+
+  @media only screen and (min-width:48em) {
+    :host > main {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+    }
+
+    :host > main {
+      width: 50rem;
+      grid-column: 1 / 6;
+    }
+  }
+
+</style>
+
+<main
+  class="
+    m-auto
+    pt6
+    pr2
+    pb2
+    pl2
+    color-light
+    font-sans
+  "
+>
+  <div
+    class="
+      welcome
+      m-auto
+      pr2
+      pl2
+      mb3
+   "
+  >
+    <img src="/_public/axol-welcome.svg" alt="Welcome to">
+  </div>
+  <div
+    class="
+      pr1
+      pl1
+      mb2
+    "
+  >
+    <img src="/_public/enhance-type.svg" alt="Enhance">
+  </div>
+  <section
+    class="
+      p2
+      mb1
+      text0
+      text1-lg
+      bg-navy
+      radius5
+      font-light
+      leading5
+    "
+  >
+    <p class="mb-1">
+      The source for this page lives in <span class="font-mono font-light inline-flex items-center pr-3 pl-3 border-solid border1 border-lilac radius1 ">app/pages</span>
+
+    </p>
+    <p>
+      Edit <span class="font-mono font-light inline-flex items-center pr-3 pl-3 border-solid border1 border-lilac radius1">app/pages/index.html</span> to see your changes
+    </p>
+  </section>
+  <div
+    class="f
+     grid-lg
+     flow-col
+     gap1
+     w-full
+    "
+   >
+    <a
+      href="https://enhance.dev/docs/"
+      class="
+        link-btn
+        mb1
+        p1
+        flex
+        justify-center
+        items-center
+        radius5
+        bg-lilac
+        font-bold
+      "
+    >
+      CHECK OUT THE DOCS
+    </a>
+    <a
+      href="https://enhance.dev/discord/"
+      class="
+        mb1
+        link-btn
+        flex
+        justify-center
+        items-center
+        radius5
+        bg-lilac
+        font-bold
+      "
+    >
+      <div
+        class="
+          discord-logo
+          mr-2
+        "
+      >
+        <img src="/_public/discord-logo.svg" alt="Discord logo">
+      </div>
+      JOIN OUR DISCORD
+    </a>
+  </div>
+</main>
+
