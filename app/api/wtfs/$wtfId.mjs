@@ -10,7 +10,17 @@ export async function get(req) {
     
     // Read markdown file
     const docURL = new URL(`../../md/${docPath}.md`, import.meta.url)
-    const docMarkdown = readFileSync(docURL.pathname, 'utf-8')
+    let docMarkdown 
+    try {
+        docMarkdown = readFileSync(docURL.pathname, 'utf-8')
+    } catch(err) {
+        if (err.code === 'ENOENT') {
+            return {
+                statusCode: 404,
+            }
+        }
+        throw err
+    }
 
     // Convert to HTML and add to store
     const doc = await arcdown.render(docMarkdown)
