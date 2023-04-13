@@ -7,7 +7,7 @@ export async function get(req) {
     let docPath = activePath || 'index'
     
     // Read markdown file
-    const docsURL = new URL(`../../md`, import.meta.url)
+    const docsURL = new URL(`../md`, import.meta.url)
     const docs = readdirSync(docsURL.pathname, 'utf-8')
     
     return {
