@@ -7,6 +7,7 @@ wtfjs.com
 @static
 staging wtfjs-staging
 production wtfjs-production
+prune true
 
 @aws
 profile personal
@@ -18,3 +19,6 @@ get /about
 get /license
 get /wtfs
 get /wtfs/:wtfID
+
+@plugins
+enhance/arc-plugin-enhance

@@ -1,9 +1,0 @@
-{
-  "name": "wtfjs-get-wtfs-000wtfID",
-  "dependencies": {
-    "@architect/data": "^2.0.5",
-    "@architect/functions": "^1.9.2",
-    "file-exists": "^4.0.0",
-    "marked": "^0.3.19"
-  }
-}
